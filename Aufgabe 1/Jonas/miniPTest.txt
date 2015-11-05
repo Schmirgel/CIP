@@ -1,0 +1,31 @@
+program
+
+integer a;
+real zY;
+string b1212;
+boolean buhuu;
+
+begin
+
+ while a <= 123456789 do
+	
+	println(randomVAR123);
+	
+	if zY > undef then
+
+		read(undef20);
+		/*
+
+                asdsssssssss Dieser Text wird ignoriert.
+		sssssssssssssssssaasda
+                dasdasd2132123 13123123 21 Yeah !=)" Das klappt.???
+                33123 3213123 3123 123 123 132 123 231 1233 123 123 123 123 123 123 123 
+
+		*/
+	else a := a + 2;
+	fi;
+	
+	i := i + (5 * 99.99 + (6 / 3) - 3);
+ od;
+
+end
