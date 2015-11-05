@@ -10,16 +10,19 @@ konstanten
 	: (INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE) ;
 
 anweisung
-	: (wertzuweisung | arith_ausdruck | read | println | fi | elihw) ';' ;
+	: (wertzuweisung | arith_ausdruck s | read | println | fi | elihw) ';' ;
 	
 wertzuweisung
-	: IDENTIFIER ':=' (arith_ausdruck | STRING | vergleich);
+	: IDENTIFIER ':=' ( STRING | arith_ausdruck s) ;
+
+s	: COMPARE_OP arith_ausdruck
+	| 	;
 	
 arith_ausdruck
 	: mult (('+' | '-') mult)*	; //da mult links steht wird es als erstes vom Parser bearbeitet -> so wird "Punkt vor Strich" garantiert
 	
 mult	
-	: atom (('*' | '/') atom)*	;
+	: atom (('*' | '/') atom)*	; 
 	
 atom	
 	: ('+' | '-')? INTEGER
@@ -32,7 +35,7 @@ fi
 
 vergleich
 	://(arithmetischen) Variablen
-	arith_ausdruck COMPARE_OP arith_ausdruck;
+	 arith_ausdruck COMPARE_OP arith_ausdruck;
 
 elihw
 	: 'while' vergleich 'do' anweisung+ 'od' ;

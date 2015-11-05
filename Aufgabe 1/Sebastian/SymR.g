@@ -1,7 +1,7 @@
 grammar SymR;
 
 /*start -> Starsymbol*/
-start	:	taskline opline taskline equalsline taskline; //taskline = 1. Zeile, opline = 2. Zeile, usw.
+start		: taskline opline taskline equalsline taskline; //taskline = 1. Zeile, opline = 2. Zeile, usw.
 
 taskline	: word OPERATOR	word EQUALS word	;     //taskline ist eine Zeile die Buchstaben, Operatoren und ein Gleichheitszeichten enhaelt
 

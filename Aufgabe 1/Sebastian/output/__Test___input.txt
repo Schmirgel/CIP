@@ -1,0 +1,11 @@
+program
+integer a, n;
+real x;
+
+begin
+
+a := 0;
+n := 4;
+x := 5;
+
+end
