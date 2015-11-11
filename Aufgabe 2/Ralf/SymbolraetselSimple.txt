@@ -1,0 +1,7 @@
+MG + AF = GKA
+RMP - CI = MG
+CI - NTZ = DOOF
+
+MG - RMP = CI
+AF + CI = NTZ
+GKA - MG = DOOF

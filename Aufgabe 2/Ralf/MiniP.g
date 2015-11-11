@@ -3,53 +3,61 @@ grammar MiniP;
 options {output = AST;}
 
 tokens {
-	SLIST;}
+	THEN;
+	ELSE;}
 
 start
-	: START_TOKEN deklaration* BEGIN_TOKEN anweisung+ END_TOKEN ; 	//deklaration optional oder beliebig viele; EINE anweisung mindestens noetig
+	: START_TOKEN! deklaration* BEGIN_TOKEN! anweisung+ END_TOKEN! ; 	//deklaration optional oder beliebig viele; EINE anweisung mindestens noetig
 	
 deklaration
-	: konstanten id=IDENTIFIER (',' IDENTIFIER)* ';' -> ^(SLIST[$id] IDENTIFIER+);
+	: konstanten id=IDENTIFIER (',' IDENTIFIER)* ';' -> ^(konstanten IDENTIFIER)+;
 
 konstanten
 	: (INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE) ;
 
 anweisung
-	: (wertzuweisung | arith_ausdruck s | read | println | fi | elihw) ';' ;
+	: (wertzuweisung | arith_ausdruck s | read | println | fi | elihw) ';'! ;
 	
 wertzuweisung
-	: IDENTIFIER ':=' ( STRING | arith_ausdruck s) ;
+	: IDENTIFIER ':=' wertzuweisungA -> ^(':=' IDENTIFIER wertzuweisungA);
+	
+wertzuweisungA 
+	:	STRING
+	|	arith_ausdruck s;
 
 s	: COMPARE_OP arith_ausdruck
 	| 	;
 	
 arith_ausdruck
-	: mult (('+' | '-') mult)*	; //da mult links steht wird es als erstes vom Parser bearbeitet -> so wird "Punkt vor Strich" garantiert
+	: mult (('+' | '-')^ mult)*	; //da mult links steht wird es als erstes vom Parser bearbeitet -> so wird "Punkt vor Strich" garantiert
 	
 mult	
-	: atom (('*' | '/') atom)*	; 
+	: atom (('*' | '/')^ atom)*	; 
 	
 atom	
-	: ('+' | '-')? INTEGER
-	| ('+' | '-')? REAL
+	: ('+'^ | '-'^)? INTEGER
+	| ('+'^ | '-'^)? REAL
 	| IDENTIFIER
 	| '(' arith_ausdruck ')'	;
 
 fi 
-	: 'if' vergleich  'then' anweisung+ ('else' anweisung+)? 'fi';
+	: 'if' vergleich  'then' ifanweisung+ ('else' elseanweisung+)? 'fi' -> ^('if' vergleich ^(THEN ifanweisung+) ^(ELSE elseanweisung+)?);
+ifanweisung
+	: anweisung	;
+elseanweisung
+	: anweisung	;
 
 vergleich
-	://(arithmetischen) Variablen
-	 arith_ausdruck COMPARE_OP arith_ausdruck;
+	: arith_ausdruck COMPARE_OP^ arith_ausdruck;
 
 elihw
-	: 'while' vergleich 'do' anweisung+ 'od' ;
+	: 'while' vergleich 'do' anweisung+ 'od' -> ^('while' vergleich anweisung+);
 
 read 	
-	: 'read(' IDENTIFIER ')'	; 
+	: 'read'^ '('! IDENTIFIER ')'!	; 
 
 println 
-	: 'println(' (arith_ausdruck | STRING) ')' ; 
+	: 'println'^ '('! (arith_ausdruck | STRING) ')'! ; 
 
 //Symbol-Klassen
 START_TOKEN 
