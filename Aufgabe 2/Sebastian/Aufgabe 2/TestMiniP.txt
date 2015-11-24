@@ -1,0 +1,38 @@
+program
+integer a, n;
+real x;
+
+begin
+
+a := 0;
+n := 4;
+x := 5;
+
+a := (123 + 321) * 234 +- 986 / 2;
+
+/*if*/
+if n < x
+then
+a := x - n;
+println(a);
+else
+
+/*verschachteltes while*/
+while a<x
+do
+a := 6456.45-8686.23;
+od;
+a := n-x;
+fi;
+
+/* while*/
+while a>0
+do
+a := a-1;
+od;
+
+read(a);
+
+println("done");
+
+end
