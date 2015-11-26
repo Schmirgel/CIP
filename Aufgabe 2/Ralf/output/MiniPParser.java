@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g 2015-11-11 12:27:55
+// $ANTLR 3.4 Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g 2015-11-26 12:46:37
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -13,11 +13,10 @@ import org.antlr.runtime.tree.*;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class MiniPParser extends DebugParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "BEGIN_TOKEN", "BLOCK_KOMMENTAR", "BOOLEAN", "BOOL_KONSTANTE", "BUCHSTABE", "COMPARE_OP", "END_TOKEN", "IDENTIFIER", "INTEGER", "INT_KONSTANTE", "LEERZEICHEN", "NEUE_ZEILE", "REAL", "REAL_KONSTANTE", "SLIST", "START_TOKEN", "STRING", "STRING_KONSTANTE", "ZAHL", "'('", "')'", "'*'", "'+'", "','", "'-'", "'/'", "':='", "';'", "'do'", "'else'", "'fi'", "'if'", "'od'", "'println('", "'read('", "'then'", "'while'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "BEGIN_TOKEN", "BLOCK_KOMMENTAR", "BOOLEAN", "BOOL_KONSTANTE", "BUCHSTABE", "COMPARE_OP", "ELSE", "END_TOKEN", "IDENTIFIER", "INTEGER", "INT_KONSTANTE", "LEERZEICHEN", "NEUE_ZEILE", "REAL", "REAL_KONSTANTE", "START_TOKEN", "STRING", "STRING_KONSTANTE", "THEN", "ZAHL", "'('", "')'", "'*'", "'+'", "','", "'-'", "'/'", "':='", "';'", "'do'", "'else'", "'fi'", "'if'", "'od'", "'println'", "'read'", "'then'", "'while'"
     };
 
     public static final int EOF=-1;
-    public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__26=26;
@@ -35,25 +34,27 @@ public class MiniPParser extends DebugParser {
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int T__40=40;
+    public static final int T__41=41;
     public static final int BEGIN_TOKEN=4;
     public static final int BLOCK_KOMMENTAR=5;
     public static final int BOOLEAN=6;
     public static final int BOOL_KONSTANTE=7;
     public static final int BUCHSTABE=8;
     public static final int COMPARE_OP=9;
-    public static final int END_TOKEN=10;
-    public static final int IDENTIFIER=11;
-    public static final int INTEGER=12;
-    public static final int INT_KONSTANTE=13;
-    public static final int LEERZEICHEN=14;
-    public static final int NEUE_ZEILE=15;
-    public static final int REAL=16;
-    public static final int REAL_KONSTANTE=17;
-    public static final int SLIST=18;
+    public static final int ELSE=10;
+    public static final int END_TOKEN=11;
+    public static final int IDENTIFIER=12;
+    public static final int INTEGER=13;
+    public static final int INT_KONSTANTE=14;
+    public static final int LEERZEICHEN=15;
+    public static final int NEUE_ZEILE=16;
+    public static final int REAL=17;
+    public static final int REAL_KONSTANTE=18;
     public static final int START_TOKEN=19;
     public static final int STRING=20;
     public static final int STRING_KONSTANTE=21;
-    public static final int ZAHL=22;
+    public static final int THEN=22;
+    public static final int ZAHL=23;
 
     // delegates
     public Parser[] getDelegates() {
@@ -64,9 +65,9 @@ public class MiniPParser extends DebugParser {
 
 
 public static final String[] ruleNames = new String[] {
-    "invalidRule", "start", "println", "vergleich", "s", "konstanten", "fi", 
-    "elihw", "read", "atom", "mult", "arith_ausdruck", "deklaration", "anweisung", 
-    "wertzuweisung"
+    "invalidRule", "elihw", "mult", "elseanweisung", "konstanten", "wertzuweisung", 
+    "read", "ifanweisung", "vergleich", "wertzuweisungA", "println", "deklaration", 
+    "atom", "s", "fi", "start", "anweisung", "arith_ausdruck"
 };
 
 public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -125,7 +126,7 @@ public TreeAdaptor getTreeAdaptor() {
 }
 
     public String[] getTokenNames() { return MiniPParser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g"; }
+    public String getGrammarFileName() { return "Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g"; }
 
 
     public static class start_return extends ParserRuleReturnScope {
@@ -135,7 +136,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "start"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:8:1: start : START_TOKEN ( deklaration )* BEGIN_TOKEN ( anweisung )+ END_TOKEN ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:9:1: start : START_TOKEN ! ( deklaration )* BEGIN_TOKEN ! ( anweisung )+ END_TOKEN !;
     public final MiniPParser.start_return start() throws RecognitionException {
         MiniPParser.start_return retval = new MiniPParser.start_return();
         retval.start = input.LT(1);
@@ -158,26 +159,21 @@ public TreeAdaptor getTreeAdaptor() {
         try { dbg.enterRule(getGrammarFileName(), "start");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(8, 0);
+        dbg.location(9, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:9:2: ( START_TOKEN ( deklaration )* BEGIN_TOKEN ( anweisung )+ END_TOKEN )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:10:2: ( START_TOKEN ! ( deklaration )* BEGIN_TOKEN ! ( anweisung )+ END_TOKEN !)
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:9:4: START_TOKEN ( deklaration )* BEGIN_TOKEN ( anweisung )+ END_TOKEN
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:10:4: START_TOKEN ! ( deklaration )* BEGIN_TOKEN ! ( anweisung )+ END_TOKEN !
             {
             root_0 = (Object)adaptor.nil();
 
 
-            dbg.location(9,4);
-            START_TOKEN1=(Token)match(input,START_TOKEN,FOLLOW_START_TOKEN_in_start29); 
-            START_TOKEN1_tree = 
-            (Object)adaptor.create(START_TOKEN1)
-            ;
-            adaptor.addChild(root_0, START_TOKEN1_tree);
-
-            dbg.location(9,16);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:9:16: ( deklaration )*
+            dbg.location(10,15);
+            START_TOKEN1=(Token)match(input,START_TOKEN,FOLLOW_START_TOKEN_in_start33); 
+            dbg.location(10,17);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:10:17: ( deklaration )*
             try { dbg.enterSubRule(1);
 
             loop1:
@@ -198,10 +194,10 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:9:16: deklaration
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:10:17: deklaration
             	    {
-            	    dbg.location(9,16);
-            	    pushFollow(FOLLOW_deklaration_in_start31);
+            	    dbg.location(10,17);
+            	    pushFollow(FOLLOW_deklaration_in_start36);
             	    deklaration2=deklaration();
 
             	    state._fsp--;
@@ -217,15 +213,10 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
             } finally {dbg.exitSubRule(1);}
 
-            dbg.location(9,29);
-            BEGIN_TOKEN3=(Token)match(input,BEGIN_TOKEN,FOLLOW_BEGIN_TOKEN_in_start34); 
-            BEGIN_TOKEN3_tree = 
-            (Object)adaptor.create(BEGIN_TOKEN3)
-            ;
-            adaptor.addChild(root_0, BEGIN_TOKEN3_tree);
-
-            dbg.location(9,41);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:9:41: ( anweisung )+
+            dbg.location(10,41);
+            BEGIN_TOKEN3=(Token)match(input,BEGIN_TOKEN,FOLLOW_BEGIN_TOKEN_in_start39); 
+            dbg.location(10,43);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:10:43: ( anweisung )+
             int cnt2=0;
             try { dbg.enterSubRule(2);
 
@@ -236,7 +227,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 int LA2_0 = input.LA(1);
 
-                if ( ((LA2_0 >= IDENTIFIER && LA2_0 <= INTEGER)||LA2_0==REAL||LA2_0==23||LA2_0==26||LA2_0==28||LA2_0==35||(LA2_0 >= 37 && LA2_0 <= 38)||LA2_0==40) ) {
+                if ( ((LA2_0 >= IDENTIFIER && LA2_0 <= INTEGER)||LA2_0==REAL||LA2_0==24||LA2_0==27||LA2_0==29||LA2_0==36||(LA2_0 >= 38 && LA2_0 <= 39)||LA2_0==41) ) {
                     alt2=1;
                 }
 
@@ -247,10 +238,10 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:9:41: anweisung
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:10:43: anweisung
             	    {
-            	    dbg.location(9,41);
-            	    pushFollow(FOLLOW_anweisung_in_start36);
+            	    dbg.location(10,43);
+            	    pushFollow(FOLLOW_anweisung_in_start42);
             	    anweisung4=anweisung();
 
             	    state._fsp--;
@@ -272,13 +263,8 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
             } finally {dbg.exitSubRule(2);}
 
-            dbg.location(9,52);
-            END_TOKEN5=(Token)match(input,END_TOKEN,FOLLOW_END_TOKEN_in_start39); 
-            END_TOKEN5_tree = 
-            (Object)adaptor.create(END_TOKEN5)
-            ;
-            adaptor.addChild(root_0, END_TOKEN5_tree);
-
+            dbg.location(10,63);
+            END_TOKEN5=(Token)match(input,END_TOKEN,FOLLOW_END_TOKEN_in_start45); 
 
             }
 
@@ -299,7 +285,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(9, 61);
+        dbg.location(10, 64);
 
         }
         finally {
@@ -320,7 +306,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "deklaration"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:11:1: deklaration : konstanten id= IDENTIFIER ( ',' IDENTIFIER )* ';' -> ^( SLIST[$id] ( IDENTIFIER )+ ) ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:12:1: deklaration : konstanten id= IDENTIFIER ( ',' IDENTIFIER )* ';' -> ( ^( konstanten IDENTIFIER ) )+ ;
     public final MiniPParser.deklaration_return deklaration() throws RecognitionException {
         MiniPParser.deklaration_return retval = new MiniPParser.deklaration_return();
         retval.start = input.LT(1);
@@ -339,34 +325,34 @@ public TreeAdaptor getTreeAdaptor() {
         Object char_literal7_tree=null;
         Object IDENTIFIER8_tree=null;
         Object char_literal9_tree=null;
-        RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
+        RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
         RewriteRuleTokenStream stream_IDENTIFIER=new RewriteRuleTokenStream(adaptor,"token IDENTIFIER");
-        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
+        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
         RewriteRuleSubtreeStream stream_konstanten=new RewriteRuleSubtreeStream(adaptor,"rule konstanten");
         try { dbg.enterRule(getGrammarFileName(), "deklaration");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(11, 0);
+        dbg.location(12, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:12:2: ( konstanten id= IDENTIFIER ( ',' IDENTIFIER )* ';' -> ^( SLIST[$id] ( IDENTIFIER )+ ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:13:2: ( konstanten id= IDENTIFIER ( ',' IDENTIFIER )* ';' -> ( ^( konstanten IDENTIFIER ) )+ )
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:12:4: konstanten id= IDENTIFIER ( ',' IDENTIFIER )* ';'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:13:4: konstanten id= IDENTIFIER ( ',' IDENTIFIER )* ';'
             {
-            dbg.location(12,4);
-            pushFollow(FOLLOW_konstanten_in_deklaration52);
+            dbg.location(13,4);
+            pushFollow(FOLLOW_konstanten_in_deklaration59);
             konstanten6=konstanten();
 
             state._fsp--;
 
             stream_konstanten.add(konstanten6.getTree());
-            dbg.location(12,17);
-            id=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_deklaration56);  
+            dbg.location(13,17);
+            id=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_deklaration63);  
             stream_IDENTIFIER.add(id);
 
-            dbg.location(12,29);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:12:29: ( ',' IDENTIFIER )*
+            dbg.location(13,29);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:13:29: ( ',' IDENTIFIER )*
             try { dbg.enterSubRule(3);
 
             loop3:
@@ -376,7 +362,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==27) ) {
+                if ( (LA3_0==28) ) {
                     alt3=1;
                 }
 
@@ -387,14 +373,14 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:12:30: ',' IDENTIFIER
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:13:30: ',' IDENTIFIER
             	    {
-            	    dbg.location(12,30);
-            	    char_literal7=(Token)match(input,27,FOLLOW_27_in_deklaration59);  
-            	    stream_27.add(char_literal7);
+            	    dbg.location(13,30);
+            	    char_literal7=(Token)match(input,28,FOLLOW_28_in_deklaration66);  
+            	    stream_28.add(char_literal7);
 
-            	    dbg.location(12,34);
-            	    IDENTIFIER8=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_deklaration61);  
+            	    dbg.location(13,34);
+            	    IDENTIFIER8=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_deklaration68);  
             	    stream_IDENTIFIER.add(IDENTIFIER8);
 
 
@@ -407,13 +393,13 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
             } finally {dbg.exitSubRule(3);}
 
-            dbg.location(12,47);
-            char_literal9=(Token)match(input,31,FOLLOW_31_in_deklaration65);  
-            stream_31.add(char_literal9);
+            dbg.location(13,47);
+            char_literal9=(Token)match(input,32,FOLLOW_32_in_deklaration72);  
+            stream_32.add(char_literal9);
 
 
             // AST REWRITE
-            // elements: IDENTIFIER
+            // elements: IDENTIFIER, konstanten
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -423,32 +409,31 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 12:51: -> ^( SLIST[$id] ( IDENTIFIER )+ )
+            // 13:51: -> ( ^( konstanten IDENTIFIER ) )+
             {
-                dbg.location(12,54);
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:12:54: ^( SLIST[$id] ( IDENTIFIER )+ )
-                {
-                Object root_1 = (Object)adaptor.nil();
-                dbg.location(12,56);
-                root_1 = (Object)adaptor.becomeRoot(
-                (Object)adaptor.create(SLIST, id)
-                , root_1);
-
-                dbg.location(12,67);
-                if ( !(stream_IDENTIFIER.hasNext()) ) {
+                dbg.location(13,54);
+                if ( !(stream_IDENTIFIER.hasNext()||stream_konstanten.hasNext()) ) {
                     throw new RewriteEarlyExitException();
                 }
-                while ( stream_IDENTIFIER.hasNext() ) {
-                    dbg.location(12,67);
+                while ( stream_IDENTIFIER.hasNext()||stream_konstanten.hasNext() ) {
+                    dbg.location(13,54);
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:13:54: ^( konstanten IDENTIFIER )
+                    {
+                    Object root_1 = (Object)adaptor.nil();
+                    dbg.location(13,56);
+                    root_1 = (Object)adaptor.becomeRoot(stream_konstanten.nextNode(), root_1);
+
+                    dbg.location(13,67);
                     adaptor.addChild(root_1, 
                     stream_IDENTIFIER.nextNode()
                     );
 
+                    adaptor.addChild(root_0, root_1);
+                    }
+
                 }
                 stream_IDENTIFIER.reset();
-
-                adaptor.addChild(root_0, root_1);
-                }
+                stream_konstanten.reset();
 
             }
 
@@ -474,7 +459,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(12, 78);
+        dbg.location(13, 78);
 
         }
         finally {
@@ -495,7 +480,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "konstanten"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:14:1: konstanten : ( INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE ) ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:15:1: konstanten : ( INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE ) ;
     public final MiniPParser.konstanten_return konstanten() throws RecognitionException {
         MiniPParser.konstanten_return retval = new MiniPParser.konstanten_return();
         retval.start = input.LT(1);
@@ -510,18 +495,18 @@ public TreeAdaptor getTreeAdaptor() {
         try { dbg.enterRule(getGrammarFileName(), "konstanten");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(14, 0);
+        dbg.location(15, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:15:2: ( ( INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:16:2: ( ( INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE ) )
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
             {
             root_0 = (Object)adaptor.nil();
 
 
-            dbg.location(15,2);
+            dbg.location(16,2);
             set10=(Token)input.LT(1);
 
             if ( input.LA(1)==BOOL_KONSTANTE||input.LA(1)==INT_KONSTANTE||input.LA(1)==REAL_KONSTANTE||input.LA(1)==STRING_KONSTANTE ) {
@@ -557,7 +542,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(15, 72);
+        dbg.location(16, 72);
 
         }
         finally {
@@ -578,7 +563,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "anweisung"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:17:1: anweisung : ( wertzuweisung | arith_ausdruck s | read | println | fi | elihw ) ';' ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:18:1: anweisung : ( wertzuweisung | arith_ausdruck s | read | println | fi | elihw ) ';' !;
     public final MiniPParser.anweisung_return anweisung() throws RecognitionException {
         MiniPParser.anweisung_return retval = new MiniPParser.anweisung_return();
         retval.start = input.LT(1);
@@ -607,19 +592,19 @@ public TreeAdaptor getTreeAdaptor() {
         try { dbg.enterRule(getGrammarFileName(), "anweisung");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(17, 0);
+        dbg.location(18, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:2: ( ( wertzuweisung | arith_ausdruck s | read | println | fi | elihw ) ';' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:2: ( ( wertzuweisung | arith_ausdruck s | read | println | fi | elihw ) ';' !)
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:4: ( wertzuweisung | arith_ausdruck s | read | println | fi | elihw ) ';'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:4: ( wertzuweisung | arith_ausdruck s | read | println | fi | elihw ) ';' !
             {
             root_0 = (Object)adaptor.nil();
 
 
-            dbg.location(18,4);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:4: ( wertzuweisung | arith_ausdruck s | read | println | fi | elihw )
+            dbg.location(19,4);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:4: ( wertzuweisung | arith_ausdruck s | read | println | fi | elihw )
             int alt4=6;
             try { dbg.enterSubRule(4);
             try { dbg.enterDecision(4, decisionCanBacktrack[4]);
@@ -629,10 +614,10 @@ public TreeAdaptor getTreeAdaptor() {
                 {
                 int LA4_1 = input.LA(2);
 
-                if ( (LA4_1==30) ) {
+                if ( (LA4_1==31) ) {
                     alt4=1;
                 }
-                else if ( (LA4_1==COMPARE_OP||(LA4_1 >= 25 && LA4_1 <= 26)||(LA4_1 >= 28 && LA4_1 <= 29)||LA4_1==31) ) {
+                else if ( (LA4_1==COMPARE_OP||(LA4_1 >= 26 && LA4_1 <= 27)||(LA4_1 >= 29 && LA4_1 <= 30)||LA4_1==32) ) {
                     alt4=2;
                 }
                 else {
@@ -647,29 +632,29 @@ public TreeAdaptor getTreeAdaptor() {
                 break;
             case INTEGER:
             case REAL:
-            case 23:
-            case 26:
-            case 28:
+            case 24:
+            case 27:
+            case 29:
                 {
                 alt4=2;
                 }
                 break;
-            case 38:
+            case 39:
                 {
                 alt4=3;
                 }
                 break;
-            case 37:
+            case 38:
                 {
                 alt4=4;
                 }
                 break;
-            case 35:
+            case 36:
                 {
                 alt4=5;
                 }
                 break;
-            case 40:
+            case 41:
                 {
                 alt4=6;
                 }
@@ -689,10 +674,10 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:5: wertzuweisung
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:5: wertzuweisung
                     {
-                    dbg.location(18,5);
-                    pushFollow(FOLLOW_wertzuweisung_in_anweisung109);
+                    dbg.location(19,5);
+                    pushFollow(FOLLOW_wertzuweisung_in_anweisung115);
                     wertzuweisung11=wertzuweisung();
 
                     state._fsp--;
@@ -704,17 +689,17 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:21: arith_ausdruck s
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:21: arith_ausdruck s
                     {
-                    dbg.location(18,21);
-                    pushFollow(FOLLOW_arith_ausdruck_in_anweisung113);
+                    dbg.location(19,21);
+                    pushFollow(FOLLOW_arith_ausdruck_in_anweisung119);
                     arith_ausdruck12=arith_ausdruck();
 
                     state._fsp--;
 
                     adaptor.addChild(root_0, arith_ausdruck12.getTree());
-                    dbg.location(18,36);
-                    pushFollow(FOLLOW_s_in_anweisung115);
+                    dbg.location(19,36);
+                    pushFollow(FOLLOW_s_in_anweisung121);
                     s13=s();
 
                     state._fsp--;
@@ -726,10 +711,10 @@ public TreeAdaptor getTreeAdaptor() {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:40: read
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:40: read
                     {
-                    dbg.location(18,40);
-                    pushFollow(FOLLOW_read_in_anweisung119);
+                    dbg.location(19,40);
+                    pushFollow(FOLLOW_read_in_anweisung125);
                     read14=read();
 
                     state._fsp--;
@@ -741,10 +726,10 @@ public TreeAdaptor getTreeAdaptor() {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:47: println
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:47: println
                     {
-                    dbg.location(18,47);
-                    pushFollow(FOLLOW_println_in_anweisung123);
+                    dbg.location(19,47);
+                    pushFollow(FOLLOW_println_in_anweisung129);
                     println15=println();
 
                     state._fsp--;
@@ -756,10 +741,10 @@ public TreeAdaptor getTreeAdaptor() {
                 case 5 :
                     dbg.enterAlt(5);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:57: fi
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:57: fi
                     {
-                    dbg.location(18,57);
-                    pushFollow(FOLLOW_fi_in_anweisung127);
+                    dbg.location(19,57);
+                    pushFollow(FOLLOW_fi_in_anweisung133);
                     fi16=fi();
 
                     state._fsp--;
@@ -771,10 +756,10 @@ public TreeAdaptor getTreeAdaptor() {
                 case 6 :
                     dbg.enterAlt(6);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:62: elihw
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:62: elihw
                     {
-                    dbg.location(18,62);
-                    pushFollow(FOLLOW_elihw_in_anweisung131);
+                    dbg.location(19,62);
+                    pushFollow(FOLLOW_elihw_in_anweisung137);
                     elihw17=elihw();
 
                     state._fsp--;
@@ -787,13 +772,8 @@ public TreeAdaptor getTreeAdaptor() {
             }
             } finally {dbg.exitSubRule(4);}
 
-            dbg.location(18,69);
-            char_literal18=(Token)match(input,31,FOLLOW_31_in_anweisung134); 
-            char_literal18_tree = 
-            (Object)adaptor.create(char_literal18)
-            ;
-            adaptor.addChild(root_0, char_literal18_tree);
-
+            dbg.location(19,72);
+            char_literal18=(Token)match(input,32,FOLLOW_32_in_anweisung140); 
 
             }
 
@@ -814,7 +794,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(18, 72);
+        dbg.location(19, 73);
 
         }
         finally {
@@ -835,7 +815,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "wertzuweisung"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:20:1: wertzuweisung : IDENTIFIER ':=' ( STRING | arith_ausdruck s ) ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:21:1: wertzuweisung : IDENTIFIER ':=' wertzuweisungA -> ^( ':=' IDENTIFIER wertzuweisungA ) ;
     public final MiniPParser.wertzuweisung_return wertzuweisung() throws RecognitionException {
         MiniPParser.wertzuweisung_return retval = new MiniPParser.wertzuweisung_return();
         retval.start = input.LT(1);
@@ -845,48 +825,142 @@ public TreeAdaptor getTreeAdaptor() {
 
         Token IDENTIFIER19=null;
         Token string_literal20=null;
-        Token STRING21=null;
-        MiniPParser.arith_ausdruck_return arith_ausdruck22 =null;
-
-        MiniPParser.s_return s23 =null;
+        MiniPParser.wertzuweisungA_return wertzuweisungA21 =null;
 
 
         Object IDENTIFIER19_tree=null;
         Object string_literal20_tree=null;
-        Object STRING21_tree=null;
-
+        RewriteRuleTokenStream stream_IDENTIFIER=new RewriteRuleTokenStream(adaptor,"token IDENTIFIER");
+        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
+        RewriteRuleSubtreeStream stream_wertzuweisungA=new RewriteRuleSubtreeStream(adaptor,"rule wertzuweisungA");
         try { dbg.enterRule(getGrammarFileName(), "wertzuweisung");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(20, 0);
+        dbg.location(21, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:21:2: ( IDENTIFIER ':=' ( STRING | arith_ausdruck s ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:22:2: ( IDENTIFIER ':=' wertzuweisungA -> ^( ':=' IDENTIFIER wertzuweisungA ) )
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:21:4: IDENTIFIER ':=' ( STRING | arith_ausdruck s )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:22:4: IDENTIFIER ':=' wertzuweisungA
             {
+            dbg.location(22,4);
+            IDENTIFIER19=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_wertzuweisung152);  
+            stream_IDENTIFIER.add(IDENTIFIER19);
+
+            dbg.location(22,15);
+            string_literal20=(Token)match(input,31,FOLLOW_31_in_wertzuweisung154);  
+            stream_31.add(string_literal20);
+
+            dbg.location(22,20);
+            pushFollow(FOLLOW_wertzuweisungA_in_wertzuweisung156);
+            wertzuweisungA21=wertzuweisungA();
+
+            state._fsp--;
+
+            stream_wertzuweisungA.add(wertzuweisungA21.getTree());
+
+            // AST REWRITE
+            // elements: wertzuweisungA, 31, IDENTIFIER
+            // token labels: 
+            // rule labels: retval
+            // token list labels: 
+            // rule list labels: 
+            // wildcard labels: 
+            retval.tree = root_0;
+            RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
             root_0 = (Object)adaptor.nil();
+            // 22:35: -> ^( ':=' IDENTIFIER wertzuweisungA )
+            {
+                dbg.location(22,38);
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:22:38: ^( ':=' IDENTIFIER wertzuweisungA )
+                {
+                Object root_1 = (Object)adaptor.nil();
+                dbg.location(22,40);
+                root_1 = (Object)adaptor.becomeRoot(
+                stream_31.nextNode()
+                , root_1);
+
+                dbg.location(22,45);
+                adaptor.addChild(root_1, 
+                stream_IDENTIFIER.nextNode()
+                );
+                dbg.location(22,56);
+                adaptor.addChild(root_1, stream_wertzuweisungA.nextTree());
+
+                adaptor.addChild(root_0, root_1);
+                }
+
+            }
 
 
-            dbg.location(21,4);
-            IDENTIFIER19=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_wertzuweisung145); 
-            IDENTIFIER19_tree = 
-            (Object)adaptor.create(IDENTIFIER19)
-            ;
-            adaptor.addChild(root_0, IDENTIFIER19_tree);
+            retval.tree = root_0;
 
-            dbg.location(21,15);
-            string_literal20=(Token)match(input,30,FOLLOW_30_in_wertzuweisung147); 
-            string_literal20_tree = 
-            (Object)adaptor.create(string_literal20)
-            ;
-            adaptor.addChild(root_0, string_literal20_tree);
+            }
 
-            dbg.location(21,20);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:21:20: ( STRING | arith_ausdruck s )
+            retval.stop = input.LT(-1);
+
+
+            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
+
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        dbg.location(22, 70);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "wertzuweisung");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return retval;
+    }
+    // $ANTLR end "wertzuweisung"
+
+
+    public static class wertzuweisungA_return extends ParserRuleReturnScope {
+        Object tree;
+        public Object getTree() { return tree; }
+    };
+
+
+    // $ANTLR start "wertzuweisungA"
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:24:1: wertzuweisungA : ( STRING | arith_ausdruck s );
+    public final MiniPParser.wertzuweisungA_return wertzuweisungA() throws RecognitionException {
+        MiniPParser.wertzuweisungA_return retval = new MiniPParser.wertzuweisungA_return();
+        retval.start = input.LT(1);
+
+
+        Object root_0 = null;
+
+        Token STRING22=null;
+        MiniPParser.arith_ausdruck_return arith_ausdruck23 =null;
+
+        MiniPParser.s_return s24 =null;
+
+
+        Object STRING22_tree=null;
+
+        try { dbg.enterRule(getGrammarFileName(), "wertzuweisungA");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(24, 0);
+
+        try {
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:25:2: ( STRING | arith_ausdruck s )
             int alt5=2;
-            try { dbg.enterSubRule(5);
             try { dbg.enterDecision(5, decisionCanBacktrack[5]);
 
             int LA5_0 = input.LA(1);
@@ -894,7 +968,7 @@ public TreeAdaptor getTreeAdaptor() {
             if ( (LA5_0==STRING) ) {
                 alt5=1;
             }
-            else if ( ((LA5_0 >= IDENTIFIER && LA5_0 <= INTEGER)||LA5_0==REAL||LA5_0==23||LA5_0==26||LA5_0==28) ) {
+            else if ( ((LA5_0 >= IDENTIFIER && LA5_0 <= INTEGER)||LA5_0==REAL||LA5_0==24||LA5_0==27||LA5_0==29) ) {
                 alt5=2;
             }
             else {
@@ -911,14 +985,17 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:21:22: STRING
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:25:4: STRING
                     {
-                    dbg.location(21,22);
-                    STRING21=(Token)match(input,STRING,FOLLOW_STRING_in_wertzuweisung151); 
-                    STRING21_tree = 
-                    (Object)adaptor.create(STRING21)
+                    root_0 = (Object)adaptor.nil();
+
+
+                    dbg.location(25,4);
+                    STRING22=(Token)match(input,STRING,FOLLOW_STRING_in_wertzuweisungA177); 
+                    STRING22_tree = 
+                    (Object)adaptor.create(STRING22)
                     ;
-                    adaptor.addChild(root_0, STRING21_tree);
+                    adaptor.addChild(root_0, STRING22_tree);
 
 
                     }
@@ -926,32 +1003,30 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:21:31: arith_ausdruck s
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:26:4: arith_ausdruck s
                     {
-                    dbg.location(21,31);
-                    pushFollow(FOLLOW_arith_ausdruck_in_wertzuweisung155);
-                    arith_ausdruck22=arith_ausdruck();
+                    root_0 = (Object)adaptor.nil();
+
+
+                    dbg.location(26,4);
+                    pushFollow(FOLLOW_arith_ausdruck_in_wertzuweisungA182);
+                    arith_ausdruck23=arith_ausdruck();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, arith_ausdruck22.getTree());
-                    dbg.location(21,46);
-                    pushFollow(FOLLOW_s_in_wertzuweisung157);
-                    s23=s();
+                    adaptor.addChild(root_0, arith_ausdruck23.getTree());
+                    dbg.location(26,19);
+                    pushFollow(FOLLOW_s_in_wertzuweisungA184);
+                    s24=s();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, s23.getTree());
+                    adaptor.addChild(root_0, s24.getTree());
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(5);}
-
-
-            }
-
             retval.stop = input.LT(-1);
 
 
@@ -969,18 +1044,18 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(21, 48);
+        dbg.location(26, 19);
 
         }
         finally {
-            dbg.exitRule(getGrammarFileName(), "wertzuweisung");
+            dbg.exitRule(getGrammarFileName(), "wertzuweisungA");
             decRuleLevel();
             if ( getRuleLevel()==0 ) {dbg.terminate();}
         }
 
         return retval;
     }
-    // $ANTLR end "wertzuweisung"
+    // $ANTLR end "wertzuweisungA"
 
 
     public static class s_return extends ParserRuleReturnScope {
@@ -990,7 +1065,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "s"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:23:1: s : ( COMPARE_OP arith_ausdruck |);
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:28:1: s : ( COMPARE_OP arith_ausdruck |);
     public final MiniPParser.s_return s() throws RecognitionException {
         MiniPParser.s_return retval = new MiniPParser.s_return();
         retval.start = input.LT(1);
@@ -998,19 +1073,19 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token COMPARE_OP24=null;
-        MiniPParser.arith_ausdruck_return arith_ausdruck25 =null;
+        Token COMPARE_OP25=null;
+        MiniPParser.arith_ausdruck_return arith_ausdruck26 =null;
 
 
-        Object COMPARE_OP24_tree=null;
+        Object COMPARE_OP25_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "s");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(23, 0);
+        dbg.location(28, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:23:3: ( COMPARE_OP arith_ausdruck |)
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:28:3: ( COMPARE_OP arith_ausdruck |)
             int alt6=2;
             try { dbg.enterDecision(6, decisionCanBacktrack[6]);
 
@@ -1019,7 +1094,7 @@ public TreeAdaptor getTreeAdaptor() {
             if ( (LA6_0==COMPARE_OP) ) {
                 alt6=1;
             }
-            else if ( (LA6_0==31) ) {
+            else if ( (LA6_0==32) ) {
                 alt6=2;
             }
             else {
@@ -1036,32 +1111,32 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:23:5: COMPARE_OP arith_ausdruck
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:28:5: COMPARE_OP arith_ausdruck
                     {
                     root_0 = (Object)adaptor.nil();
 
 
-                    dbg.location(23,5);
-                    COMPARE_OP24=(Token)match(input,COMPARE_OP,FOLLOW_COMPARE_OP_in_s167); 
-                    COMPARE_OP24_tree = 
-                    (Object)adaptor.create(COMPARE_OP24)
+                    dbg.location(28,5);
+                    COMPARE_OP25=(Token)match(input,COMPARE_OP,FOLLOW_COMPARE_OP_in_s192); 
+                    COMPARE_OP25_tree = 
+                    (Object)adaptor.create(COMPARE_OP25)
                     ;
-                    adaptor.addChild(root_0, COMPARE_OP24_tree);
+                    adaptor.addChild(root_0, COMPARE_OP25_tree);
 
-                    dbg.location(23,16);
-                    pushFollow(FOLLOW_arith_ausdruck_in_s169);
-                    arith_ausdruck25=arith_ausdruck();
+                    dbg.location(28,16);
+                    pushFollow(FOLLOW_arith_ausdruck_in_s194);
+                    arith_ausdruck26=arith_ausdruck();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, arith_ausdruck25.getTree());
+                    adaptor.addChild(root_0, arith_ausdruck26.getTree());
 
                     }
                     break;
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:24:5: 
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:29:5: 
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1087,7 +1162,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(24, 4);
+        dbg.location(29, 4);
 
         }
         finally {
@@ -1108,7 +1183,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "arith_ausdruck"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:26:1: arith_ausdruck : mult ( ( '+' | '-' ) mult )* ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:31:1: arith_ausdruck : mult ( ( '+' | '-' ) ^ mult )* ;
     public final MiniPParser.arith_ausdruck_return arith_ausdruck() throws RecognitionException {
         MiniPParser.arith_ausdruck_return retval = new MiniPParser.arith_ausdruck_return();
         retval.start = input.LT(1);
@@ -1116,37 +1191,37 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set27=null;
-        MiniPParser.mult_return mult26 =null;
+        Token set28=null;
+        MiniPParser.mult_return mult27 =null;
 
-        MiniPParser.mult_return mult28 =null;
+        MiniPParser.mult_return mult29 =null;
 
 
-        Object set27_tree=null;
+        Object set28_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "arith_ausdruck");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(26, 0);
+        dbg.location(31, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:27:2: ( mult ( ( '+' | '-' ) mult )* )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:32:2: ( mult ( ( '+' | '-' ) ^ mult )* )
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:27:4: mult ( ( '+' | '-' ) mult )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:32:4: mult ( ( '+' | '-' ) ^ mult )*
             {
             root_0 = (Object)adaptor.nil();
 
 
-            dbg.location(27,4);
-            pushFollow(FOLLOW_mult_in_arith_ausdruck184);
-            mult26=mult();
+            dbg.location(32,4);
+            pushFollow(FOLLOW_mult_in_arith_ausdruck209);
+            mult27=mult();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, mult26.getTree());
-            dbg.location(27,9);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:27:9: ( ( '+' | '-' ) mult )*
+            adaptor.addChild(root_0, mult27.getTree());
+            dbg.location(32,9);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:32:9: ( ( '+' | '-' ) ^ mult )*
             try { dbg.enterSubRule(7);
 
             loop7:
@@ -1156,7 +1231,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==26||LA7_0==28) ) {
+                if ( (LA7_0==27||LA7_0==29) ) {
                     alt7=1;
                 }
 
@@ -1167,16 +1242,18 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:27:10: ( '+' | '-' ) mult
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:32:10: ( '+' | '-' ) ^ mult
             	    {
-            	    dbg.location(27,10);
-            	    set27=(Token)input.LT(1);
+            	    dbg.location(32,21);
+            	    set28=(Token)input.LT(1);
 
-            	    if ( input.LA(1)==26||input.LA(1)==28 ) {
+            	    set28=(Token)input.LT(1);
+
+            	    if ( input.LA(1)==27||input.LA(1)==29 ) {
             	        input.consume();
-            	        adaptor.addChild(root_0, 
-            	        (Object)adaptor.create(set27)
-            	        );
+            	        root_0 = (Object)adaptor.becomeRoot(
+            	        (Object)adaptor.create(set28)
+            	        , root_0);
             	        state.errorRecovery=false;
             	    }
             	    else {
@@ -1185,13 +1262,13 @@ public TreeAdaptor getTreeAdaptor() {
             	        throw mse;
             	    }
 
-            	    dbg.location(27,22);
-            	    pushFollow(FOLLOW_mult_in_arith_ausdruck195);
-            	    mult28=mult();
+            	    dbg.location(32,23);
+            	    pushFollow(FOLLOW_mult_in_arith_ausdruck221);
+            	    mult29=mult();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, mult28.getTree());
+            	    adaptor.addChild(root_0, mult29.getTree());
 
             	    }
             	    break;
@@ -1222,7 +1299,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(27, 28);
+        dbg.location(32, 29);
 
         }
         finally {
@@ -1243,7 +1320,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "mult"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:29:1: mult : atom ( ( '*' | '/' ) atom )* ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:34:1: mult : atom ( ( '*' | '/' ) ^ atom )* ;
     public final MiniPParser.mult_return mult() throws RecognitionException {
         MiniPParser.mult_return retval = new MiniPParser.mult_return();
         retval.start = input.LT(1);
@@ -1251,37 +1328,37 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set30=null;
-        MiniPParser.atom_return atom29 =null;
+        Token set31=null;
+        MiniPParser.atom_return atom30 =null;
 
-        MiniPParser.atom_return atom31 =null;
+        MiniPParser.atom_return atom32 =null;
 
 
-        Object set30_tree=null;
+        Object set31_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "mult");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(29, 0);
+        dbg.location(34, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:30:2: ( atom ( ( '*' | '/' ) atom )* )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:35:2: ( atom ( ( '*' | '/' ) ^ atom )* )
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:30:4: atom ( ( '*' | '/' ) atom )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:35:4: atom ( ( '*' | '/' ) ^ atom )*
             {
             root_0 = (Object)adaptor.nil();
 
 
-            dbg.location(30,4);
-            pushFollow(FOLLOW_atom_in_mult210);
-            atom29=atom();
+            dbg.location(35,4);
+            pushFollow(FOLLOW_atom_in_mult236);
+            atom30=atom();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, atom29.getTree());
-            dbg.location(30,9);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:30:9: ( ( '*' | '/' ) atom )*
+            adaptor.addChild(root_0, atom30.getTree());
+            dbg.location(35,9);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:35:9: ( ( '*' | '/' ) ^ atom )*
             try { dbg.enterSubRule(8);
 
             loop8:
@@ -1291,7 +1368,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==25||LA8_0==29) ) {
+                if ( (LA8_0==26||LA8_0==30) ) {
                     alt8=1;
                 }
 
@@ -1302,16 +1379,18 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:30:10: ( '*' | '/' ) atom
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:35:10: ( '*' | '/' ) ^ atom
             	    {
-            	    dbg.location(30,10);
-            	    set30=(Token)input.LT(1);
+            	    dbg.location(35,21);
+            	    set31=(Token)input.LT(1);
 
-            	    if ( input.LA(1)==25||input.LA(1)==29 ) {
+            	    set31=(Token)input.LT(1);
+
+            	    if ( input.LA(1)==26||input.LA(1)==30 ) {
             	        input.consume();
-            	        adaptor.addChild(root_0, 
-            	        (Object)adaptor.create(set30)
-            	        );
+            	        root_0 = (Object)adaptor.becomeRoot(
+            	        (Object)adaptor.create(set31)
+            	        , root_0);
             	        state.errorRecovery=false;
             	    }
             	    else {
@@ -1320,13 +1399,13 @@ public TreeAdaptor getTreeAdaptor() {
             	        throw mse;
             	    }
 
-            	    dbg.location(30,22);
-            	    pushFollow(FOLLOW_atom_in_mult221);
-            	    atom31=atom();
+            	    dbg.location(35,23);
+            	    pushFollow(FOLLOW_atom_in_mult248);
+            	    atom32=atom();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, atom31.getTree());
+            	    adaptor.addChild(root_0, atom32.getTree());
 
             	    }
             	    break;
@@ -1357,7 +1436,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(30, 28);
+        dbg.location(35, 29);
 
         }
         finally {
@@ -1378,7 +1457,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "atom"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:32:1: atom : ( ( '+' | '-' )? INTEGER | ( '+' | '-' )? REAL | IDENTIFIER | '(' arith_ausdruck ')' );
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:37:1: atom : ( ( '+' | '-' )? INTEGER | ( '+' | '-' )? REAL | IDENTIFIER | '(' ! arith_ausdruck ')' !);
     public final MiniPParser.atom_return atom() throws RecognitionException {
         MiniPParser.atom_return retval = new MiniPParser.atom_return();
         retval.start = input.LT(1);
@@ -1386,37 +1465,37 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set32=null;
-        Token INTEGER33=null;
-        Token set34=null;
-        Token REAL35=null;
-        Token IDENTIFIER36=null;
-        Token char_literal37=null;
-        Token char_literal39=null;
-        MiniPParser.arith_ausdruck_return arith_ausdruck38 =null;
+        Token set33=null;
+        Token INTEGER34=null;
+        Token set35=null;
+        Token REAL36=null;
+        Token IDENTIFIER37=null;
+        Token char_literal38=null;
+        Token char_literal40=null;
+        MiniPParser.arith_ausdruck_return arith_ausdruck39 =null;
 
 
-        Object set32_tree=null;
-        Object INTEGER33_tree=null;
-        Object set34_tree=null;
-        Object REAL35_tree=null;
-        Object IDENTIFIER36_tree=null;
-        Object char_literal37_tree=null;
-        Object char_literal39_tree=null;
+        Object set33_tree=null;
+        Object INTEGER34_tree=null;
+        Object set35_tree=null;
+        Object REAL36_tree=null;
+        Object IDENTIFIER37_tree=null;
+        Object char_literal38_tree=null;
+        Object char_literal40_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "atom");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(32, 0);
+        dbg.location(37, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:33:2: ( ( '+' | '-' )? INTEGER | ( '+' | '-' )? REAL | IDENTIFIER | '(' arith_ausdruck ')' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:38:2: ( ( '+' | '-' )? INTEGER | ( '+' | '-' )? REAL | IDENTIFIER | '(' ! arith_ausdruck ')' !)
             int alt11=4;
             try { dbg.enterDecision(11, decisionCanBacktrack[11]);
 
             switch ( input.LA(1) ) {
-            case 26:
-            case 28:
+            case 27:
+            case 29:
                 {
                 int LA11_1 = input.LA(2);
 
@@ -1451,7 +1530,7 @@ public TreeAdaptor getTreeAdaptor() {
                 alt11=3;
                 }
                 break;
-            case 23:
+            case 24:
                 {
                 alt11=4;
                 }
@@ -1471,20 +1550,20 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:33:4: ( '+' | '-' )? INTEGER
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:38:4: ( '+' | '-' )? INTEGER
                     {
                     root_0 = (Object)adaptor.nil();
 
 
-                    dbg.location(33,4);
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:33:4: ( '+' | '-' )?
+                    dbg.location(38,4);
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:38:4: ( '+' | '-' )?
                     int alt9=2;
                     try { dbg.enterSubRule(9);
                     try { dbg.enterDecision(9, decisionCanBacktrack[9]);
 
                     int LA9_0 = input.LA(1);
 
-                    if ( (LA9_0==26||LA9_0==28) ) {
+                    if ( (LA9_0==27||LA9_0==29) ) {
                         alt9=1;
                     }
                     } finally {dbg.exitDecision(9);}
@@ -1493,15 +1572,15 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             dbg.enterAlt(1);
 
-                            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+                            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
                             {
-                            dbg.location(33,4);
-                            set32=(Token)input.LT(1);
+                            dbg.location(38,4);
+                            set33=(Token)input.LT(1);
 
-                            if ( input.LA(1)==26||input.LA(1)==28 ) {
+                            if ( input.LA(1)==27||input.LA(1)==29 ) {
                                 input.consume();
                                 adaptor.addChild(root_0, 
-                                (Object)adaptor.create(set32)
+                                (Object)adaptor.create(set33)
                                 );
                                 state.errorRecovery=false;
                             }
@@ -1518,12 +1597,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     } finally {dbg.exitSubRule(9);}
 
-                    dbg.location(33,17);
-                    INTEGER33=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_atom245); 
-                    INTEGER33_tree = 
-                    (Object)adaptor.create(INTEGER33)
+                    dbg.location(38,17);
+                    INTEGER34=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_atom272); 
+                    INTEGER34_tree = 
+                    (Object)adaptor.create(INTEGER34)
                     ;
-                    adaptor.addChild(root_0, INTEGER33_tree);
+                    adaptor.addChild(root_0, INTEGER34_tree);
 
 
                     }
@@ -1531,20 +1610,20 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:34:4: ( '+' | '-' )? REAL
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:39:4: ( '+' | '-' )? REAL
                     {
                     root_0 = (Object)adaptor.nil();
 
 
-                    dbg.location(34,4);
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:34:4: ( '+' | '-' )?
+                    dbg.location(39,4);
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:39:4: ( '+' | '-' )?
                     int alt10=2;
                     try { dbg.enterSubRule(10);
                     try { dbg.enterDecision(10, decisionCanBacktrack[10]);
 
                     int LA10_0 = input.LA(1);
 
-                    if ( (LA10_0==26||LA10_0==28) ) {
+                    if ( (LA10_0==27||LA10_0==29) ) {
                         alt10=1;
                     }
                     } finally {dbg.exitDecision(10);}
@@ -1553,15 +1632,15 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             dbg.enterAlt(1);
 
-                            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+                            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
                             {
-                            dbg.location(34,4);
-                            set34=(Token)input.LT(1);
+                            dbg.location(39,4);
+                            set35=(Token)input.LT(1);
 
-                            if ( input.LA(1)==26||input.LA(1)==28 ) {
+                            if ( input.LA(1)==27||input.LA(1)==29 ) {
                                 input.consume();
                                 adaptor.addChild(root_0, 
-                                (Object)adaptor.create(set34)
+                                (Object)adaptor.create(set35)
                                 );
                                 state.errorRecovery=false;
                             }
@@ -1578,12 +1657,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     } finally {dbg.exitSubRule(10);}
 
-                    dbg.location(34,17);
-                    REAL35=(Token)match(input,REAL,FOLLOW_REAL_in_atom259); 
-                    REAL35_tree = 
-                    (Object)adaptor.create(REAL35)
+                    dbg.location(39,17);
+                    REAL36=(Token)match(input,REAL,FOLLOW_REAL_in_atom286); 
+                    REAL36_tree = 
+                    (Object)adaptor.create(REAL36)
                     ;
-                    adaptor.addChild(root_0, REAL35_tree);
+                    adaptor.addChild(root_0, REAL36_tree);
 
 
                     }
@@ -1591,17 +1670,17 @@ public TreeAdaptor getTreeAdaptor() {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:35:4: IDENTIFIER
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:40:4: IDENTIFIER
                     {
                     root_0 = (Object)adaptor.nil();
 
 
-                    dbg.location(35,4);
-                    IDENTIFIER36=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_atom264); 
-                    IDENTIFIER36_tree = 
-                    (Object)adaptor.create(IDENTIFIER36)
+                    dbg.location(40,4);
+                    IDENTIFIER37=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_atom291); 
+                    IDENTIFIER37_tree = 
+                    (Object)adaptor.create(IDENTIFIER37)
                     ;
-                    adaptor.addChild(root_0, IDENTIFIER36_tree);
+                    adaptor.addChild(root_0, IDENTIFIER37_tree);
 
 
                     }
@@ -1609,32 +1688,22 @@ public TreeAdaptor getTreeAdaptor() {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:36:4: '(' arith_ausdruck ')'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:41:4: '(' ! arith_ausdruck ')' !
                     {
                     root_0 = (Object)adaptor.nil();
 
 
-                    dbg.location(36,4);
-                    char_literal37=(Token)match(input,23,FOLLOW_23_in_atom269); 
-                    char_literal37_tree = 
-                    (Object)adaptor.create(char_literal37)
-                    ;
-                    adaptor.addChild(root_0, char_literal37_tree);
-
-                    dbg.location(36,8);
-                    pushFollow(FOLLOW_arith_ausdruck_in_atom271);
-                    arith_ausdruck38=arith_ausdruck();
+                    dbg.location(41,7);
+                    char_literal38=(Token)match(input,24,FOLLOW_24_in_atom296); 
+                    dbg.location(41,9);
+                    pushFollow(FOLLOW_arith_ausdruck_in_atom299);
+                    arith_ausdruck39=arith_ausdruck();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, arith_ausdruck38.getTree());
-                    dbg.location(36,23);
-                    char_literal39=(Token)match(input,24,FOLLOW_24_in_atom273); 
-                    char_literal39_tree = 
-                    (Object)adaptor.create(char_literal39)
-                    ;
-                    adaptor.addChild(root_0, char_literal39_tree);
-
+                    adaptor.addChild(root_0, arith_ausdruck39.getTree());
+                    dbg.location(41,27);
+                    char_literal40=(Token)match(input,25,FOLLOW_25_in_atom301); 
 
                     }
                     break;
@@ -1657,7 +1726,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(36, 26);
+        dbg.location(41, 28);
 
         }
         finally {
@@ -1678,7 +1747,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "fi"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:38:1: fi : 'if' vergleich 'then' ( anweisung )+ ( 'else' ( anweisung )+ )? 'fi' ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:43:1: fi : 'if' vergleich 'then' ( ifanweisung )+ ( 'else' ( elseanweisung )+ )? 'fi' -> ^( 'if' vergleich ^( THEN ( ifanweisung )+ ) ( ^( ELSE ( elseanweisung )+ ) )? ) ;
     public final MiniPParser.fi_return fi() throws RecognitionException {
         MiniPParser.fi_return retval = new MiniPParser.fi_return();
         retval.start = input.LT(1);
@@ -1686,59 +1755,56 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal40=null;
-        Token string_literal42=null;
-        Token string_literal44=null;
-        Token string_literal46=null;
-        MiniPParser.vergleich_return vergleich41 =null;
+        Token string_literal41=null;
+        Token string_literal43=null;
+        Token string_literal45=null;
+        Token string_literal47=null;
+        MiniPParser.vergleich_return vergleich42 =null;
 
-        MiniPParser.anweisung_return anweisung43 =null;
+        MiniPParser.ifanweisung_return ifanweisung44 =null;
 
-        MiniPParser.anweisung_return anweisung45 =null;
+        MiniPParser.elseanweisung_return elseanweisung46 =null;
 
 
-        Object string_literal40_tree=null;
-        Object string_literal42_tree=null;
-        Object string_literal44_tree=null;
-        Object string_literal46_tree=null;
-
+        Object string_literal41_tree=null;
+        Object string_literal43_tree=null;
+        Object string_literal45_tree=null;
+        Object string_literal47_tree=null;
+        RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
+        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
+        RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
+        RewriteRuleTokenStream stream_40=new RewriteRuleTokenStream(adaptor,"token 40");
+        RewriteRuleSubtreeStream stream_ifanweisung=new RewriteRuleSubtreeStream(adaptor,"rule ifanweisung");
+        RewriteRuleSubtreeStream stream_elseanweisung=new RewriteRuleSubtreeStream(adaptor,"rule elseanweisung");
+        RewriteRuleSubtreeStream stream_vergleich=new RewriteRuleSubtreeStream(adaptor,"rule vergleich");
         try { dbg.enterRule(getGrammarFileName(), "fi");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(38, 0);
+        dbg.location(43, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:39:2: ( 'if' vergleich 'then' ( anweisung )+ ( 'else' ( anweisung )+ )? 'fi' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:2: ( 'if' vergleich 'then' ( ifanweisung )+ ( 'else' ( elseanweisung )+ )? 'fi' -> ^( 'if' vergleich ^( THEN ( ifanweisung )+ ) ( ^( ELSE ( elseanweisung )+ ) )? ) )
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:39:4: 'if' vergleich 'then' ( anweisung )+ ( 'else' ( anweisung )+ )? 'fi'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:4: 'if' vergleich 'then' ( ifanweisung )+ ( 'else' ( elseanweisung )+ )? 'fi'
             {
-            root_0 = (Object)adaptor.nil();
+            dbg.location(44,4);
+            string_literal41=(Token)match(input,36,FOLLOW_36_in_fi313);  
+            stream_36.add(string_literal41);
 
-
-            dbg.location(39,4);
-            string_literal40=(Token)match(input,35,FOLLOW_35_in_fi284); 
-            string_literal40_tree = 
-            (Object)adaptor.create(string_literal40)
-            ;
-            adaptor.addChild(root_0, string_literal40_tree);
-
-            dbg.location(39,9);
-            pushFollow(FOLLOW_vergleich_in_fi286);
-            vergleich41=vergleich();
+            dbg.location(44,9);
+            pushFollow(FOLLOW_vergleich_in_fi315);
+            vergleich42=vergleich();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, vergleich41.getTree());
-            dbg.location(39,20);
-            string_literal42=(Token)match(input,39,FOLLOW_39_in_fi289); 
-            string_literal42_tree = 
-            (Object)adaptor.create(string_literal42)
-            ;
-            adaptor.addChild(root_0, string_literal42_tree);
+            stream_vergleich.add(vergleich42.getTree());
+            dbg.location(44,20);
+            string_literal43=(Token)match(input,40,FOLLOW_40_in_fi318);  
+            stream_40.add(string_literal43);
 
-            dbg.location(39,27);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:39:27: ( anweisung )+
+            dbg.location(44,27);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:27: ( ifanweisung )+
             int cnt12=0;
             try { dbg.enterSubRule(12);
 
@@ -1749,7 +1815,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 int LA12_0 = input.LA(1);
 
-                if ( ((LA12_0 >= IDENTIFIER && LA12_0 <= INTEGER)||LA12_0==REAL||LA12_0==23||LA12_0==26||LA12_0==28||LA12_0==35||(LA12_0 >= 37 && LA12_0 <= 38)||LA12_0==40) ) {
+                if ( ((LA12_0 >= IDENTIFIER && LA12_0 <= INTEGER)||LA12_0==REAL||LA12_0==24||LA12_0==27||LA12_0==29||LA12_0==36||(LA12_0 >= 38 && LA12_0 <= 39)||LA12_0==41) ) {
                     alt12=1;
                 }
 
@@ -1760,15 +1826,15 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:39:27: anweisung
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:27: ifanweisung
             	    {
-            	    dbg.location(39,27);
-            	    pushFollow(FOLLOW_anweisung_in_fi291);
-            	    anweisung43=anweisung();
+            	    dbg.location(44,27);
+            	    pushFollow(FOLLOW_ifanweisung_in_fi320);
+            	    ifanweisung44=ifanweisung();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, anweisung43.getTree());
+            	    stream_ifanweisung.add(ifanweisung44.getTree());
 
             	    }
             	    break;
@@ -1785,15 +1851,15 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
             } finally {dbg.exitSubRule(12);}
 
-            dbg.location(39,38);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:39:38: ( 'else' ( anweisung )+ )?
+            dbg.location(44,40);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:40: ( 'else' ( elseanweisung )+ )?
             int alt14=2;
             try { dbg.enterSubRule(14);
             try { dbg.enterDecision(14, decisionCanBacktrack[14]);
 
             int LA14_0 = input.LA(1);
 
-            if ( (LA14_0==33) ) {
+            if ( (LA14_0==34) ) {
                 alt14=1;
             }
             } finally {dbg.exitDecision(14);}
@@ -1802,17 +1868,14 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:39:39: 'else' ( anweisung )+
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:41: 'else' ( elseanweisung )+
                     {
-                    dbg.location(39,39);
-                    string_literal44=(Token)match(input,33,FOLLOW_33_in_fi295); 
-                    string_literal44_tree = 
-                    (Object)adaptor.create(string_literal44)
-                    ;
-                    adaptor.addChild(root_0, string_literal44_tree);
+                    dbg.location(44,41);
+                    string_literal45=(Token)match(input,34,FOLLOW_34_in_fi324);  
+                    stream_34.add(string_literal45);
 
-                    dbg.location(39,46);
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:39:46: ( anweisung )+
+                    dbg.location(44,48);
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:48: ( elseanweisung )+
                     int cnt13=0;
                     try { dbg.enterSubRule(13);
 
@@ -1823,7 +1886,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                         int LA13_0 = input.LA(1);
 
-                        if ( ((LA13_0 >= IDENTIFIER && LA13_0 <= INTEGER)||LA13_0==REAL||LA13_0==23||LA13_0==26||LA13_0==28||LA13_0==35||(LA13_0 >= 37 && LA13_0 <= 38)||LA13_0==40) ) {
+                        if ( ((LA13_0 >= IDENTIFIER && LA13_0 <= INTEGER)||LA13_0==REAL||LA13_0==24||LA13_0==27||LA13_0==29||LA13_0==36||(LA13_0 >= 38 && LA13_0 <= 39)||LA13_0==41) ) {
                             alt13=1;
                         }
 
@@ -1834,15 +1897,15 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:39:46: anweisung
+                    	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:48: elseanweisung
                     	    {
-                    	    dbg.location(39,46);
-                    	    pushFollow(FOLLOW_anweisung_in_fi297);
-                    	    anweisung45=anweisung();
+                    	    dbg.location(44,48);
+                    	    pushFollow(FOLLOW_elseanweisung_in_fi326);
+                    	    elseanweisung46=elseanweisung();
 
                     	    state._fsp--;
 
-                    	    adaptor.addChild(root_0, anweisung45.getTree());
+                    	    stream_elseanweisung.add(elseanweisung46.getTree());
 
                     	    }
                     	    break;
@@ -1866,13 +1929,93 @@ public TreeAdaptor getTreeAdaptor() {
             }
             } finally {dbg.exitSubRule(14);}
 
-            dbg.location(39,59);
-            string_literal46=(Token)match(input,34,FOLLOW_34_in_fi302); 
-            string_literal46_tree = 
-            (Object)adaptor.create(string_literal46)
-            ;
-            adaptor.addChild(root_0, string_literal46_tree);
+            dbg.location(44,65);
+            string_literal47=(Token)match(input,35,FOLLOW_35_in_fi331);  
+            stream_35.add(string_literal47);
 
+
+            // AST REWRITE
+            // elements: elseanweisung, vergleich, ifanweisung, 36
+            // token labels: 
+            // rule labels: retval
+            // token list labels: 
+            // rule list labels: 
+            // wildcard labels: 
+            retval.tree = root_0;
+            RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
+            root_0 = (Object)adaptor.nil();
+            // 44:70: -> ^( 'if' vergleich ^( THEN ( ifanweisung )+ ) ( ^( ELSE ( elseanweisung )+ ) )? )
+            {
+                dbg.location(44,73);
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:73: ^( 'if' vergleich ^( THEN ( ifanweisung )+ ) ( ^( ELSE ( elseanweisung )+ ) )? )
+                {
+                Object root_1 = (Object)adaptor.nil();
+                dbg.location(44,75);
+                root_1 = (Object)adaptor.becomeRoot(
+                stream_36.nextNode()
+                , root_1);
+
+                dbg.location(44,80);
+                adaptor.addChild(root_1, stream_vergleich.nextTree());
+                dbg.location(44,90);
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:90: ^( THEN ( ifanweisung )+ )
+                {
+                Object root_2 = (Object)adaptor.nil();
+                dbg.location(44,92);
+                root_2 = (Object)adaptor.becomeRoot(
+                (Object)adaptor.create(THEN, "THEN")
+                , root_2);
+
+                dbg.location(44,97);
+                if ( !(stream_ifanweisung.hasNext()) ) {
+                    throw new RewriteEarlyExitException();
+                }
+                while ( stream_ifanweisung.hasNext() ) {
+                    dbg.location(44,97);
+                    adaptor.addChild(root_2, stream_ifanweisung.nextTree());
+
+                }
+                stream_ifanweisung.reset();
+
+                adaptor.addChild(root_1, root_2);
+                }
+                dbg.location(44,111);
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:111: ( ^( ELSE ( elseanweisung )+ ) )?
+                if ( stream_elseanweisung.hasNext() ) {
+                    dbg.location(44,111);
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:44:111: ^( ELSE ( elseanweisung )+ )
+                    {
+                    Object root_2 = (Object)adaptor.nil();
+                    dbg.location(44,113);
+                    root_2 = (Object)adaptor.becomeRoot(
+                    (Object)adaptor.create(ELSE, "ELSE")
+                    , root_2);
+
+                    dbg.location(44,118);
+                    if ( !(stream_elseanweisung.hasNext()) ) {
+                        throw new RewriteEarlyExitException();
+                    }
+                    while ( stream_elseanweisung.hasNext() ) {
+                        dbg.location(44,118);
+                        adaptor.addChild(root_2, stream_elseanweisung.nextTree());
+
+                    }
+                    stream_elseanweisung.reset();
+
+                    adaptor.addChild(root_1, root_2);
+                    }
+
+                }
+                stream_elseanweisung.reset();
+
+                adaptor.addChild(root_0, root_1);
+                }
+
+            }
+
+
+            retval.tree = root_0;
 
             }
 
@@ -1893,7 +2036,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(39, 62);
+        dbg.location(44, 134);
 
         }
         finally {
@@ -1907,64 +2050,46 @@ public TreeAdaptor getTreeAdaptor() {
     // $ANTLR end "fi"
 
 
-    public static class vergleich_return extends ParserRuleReturnScope {
+    public static class ifanweisung_return extends ParserRuleReturnScope {
         Object tree;
         public Object getTree() { return tree; }
     };
 
 
-    // $ANTLR start "vergleich"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:41:1: vergleich : arith_ausdruck COMPARE_OP arith_ausdruck ;
-    public final MiniPParser.vergleich_return vergleich() throws RecognitionException {
-        MiniPParser.vergleich_return retval = new MiniPParser.vergleich_return();
+    // $ANTLR start "ifanweisung"
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:45:1: ifanweisung : anweisung ;
+    public final MiniPParser.ifanweisung_return ifanweisung() throws RecognitionException {
+        MiniPParser.ifanweisung_return retval = new MiniPParser.ifanweisung_return();
         retval.start = input.LT(1);
 
 
         Object root_0 = null;
 
-        Token COMPARE_OP48=null;
-        MiniPParser.arith_ausdruck_return arith_ausdruck47 =null;
-
-        MiniPParser.arith_ausdruck_return arith_ausdruck49 =null;
+        MiniPParser.anweisung_return anweisung48 =null;
 
 
-        Object COMPARE_OP48_tree=null;
 
-        try { dbg.enterRule(getGrammarFileName(), "vergleich");
+        try { dbg.enterRule(getGrammarFileName(), "ifanweisung");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(41, 0);
+        dbg.location(45, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:42:2: ( arith_ausdruck COMPARE_OP arith_ausdruck )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:46:2: ( anweisung )
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:43:3: arith_ausdruck COMPARE_OP arith_ausdruck
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:46:4: anweisung
             {
             root_0 = (Object)adaptor.nil();
 
 
-            dbg.location(43,3);
-            pushFollow(FOLLOW_arith_ausdruck_in_vergleich313);
-            arith_ausdruck47=arith_ausdruck();
+            dbg.location(46,4);
+            pushFollow(FOLLOW_anweisung_in_ifanweisung362);
+            anweisung48=anweisung();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, arith_ausdruck47.getTree());
-            dbg.location(43,18);
-            COMPARE_OP48=(Token)match(input,COMPARE_OP,FOLLOW_COMPARE_OP_in_vergleich315); 
-            COMPARE_OP48_tree = 
-            (Object)adaptor.create(COMPARE_OP48)
-            ;
-            adaptor.addChild(root_0, COMPARE_OP48_tree);
-
-            dbg.location(43,29);
-            pushFollow(FOLLOW_arith_ausdruck_in_vergleich317);
-            arith_ausdruck49=arith_ausdruck();
-
-            state._fsp--;
-
-            adaptor.addChild(root_0, arith_ausdruck49.getTree());
+            adaptor.addChild(root_0, anweisung48.getTree());
 
             }
 
@@ -1985,7 +2110,173 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(43, 42);
+        dbg.location(46, 13);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "ifanweisung");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return retval;
+    }
+    // $ANTLR end "ifanweisung"
+
+
+    public static class elseanweisung_return extends ParserRuleReturnScope {
+        Object tree;
+        public Object getTree() { return tree; }
+    };
+
+
+    // $ANTLR start "elseanweisung"
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:47:1: elseanweisung : anweisung ;
+    public final MiniPParser.elseanweisung_return elseanweisung() throws RecognitionException {
+        MiniPParser.elseanweisung_return retval = new MiniPParser.elseanweisung_return();
+        retval.start = input.LT(1);
+
+
+        Object root_0 = null;
+
+        MiniPParser.anweisung_return anweisung49 =null;
+
+
+
+        try { dbg.enterRule(getGrammarFileName(), "elseanweisung");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(47, 0);
+
+        try {
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:48:2: ( anweisung )
+            dbg.enterAlt(1);
+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:48:4: anweisung
+            {
+            root_0 = (Object)adaptor.nil();
+
+
+            dbg.location(48,4);
+            pushFollow(FOLLOW_anweisung_in_elseanweisung371);
+            anweisung49=anweisung();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, anweisung49.getTree());
+
+            }
+
+            retval.stop = input.LT(-1);
+
+
+            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
+
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        dbg.location(48, 13);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "elseanweisung");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return retval;
+    }
+    // $ANTLR end "elseanweisung"
+
+
+    public static class vergleich_return extends ParserRuleReturnScope {
+        Object tree;
+        public Object getTree() { return tree; }
+    };
+
+
+    // $ANTLR start "vergleich"
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:50:1: vergleich : arith_ausdruck COMPARE_OP ^ arith_ausdruck ;
+    public final MiniPParser.vergleich_return vergleich() throws RecognitionException {
+        MiniPParser.vergleich_return retval = new MiniPParser.vergleich_return();
+        retval.start = input.LT(1);
+
+
+        Object root_0 = null;
+
+        Token COMPARE_OP51=null;
+        MiniPParser.arith_ausdruck_return arith_ausdruck50 =null;
+
+        MiniPParser.arith_ausdruck_return arith_ausdruck52 =null;
+
+
+        Object COMPARE_OP51_tree=null;
+
+        try { dbg.enterRule(getGrammarFileName(), "vergleich");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(50, 0);
+
+        try {
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:51:2: ( arith_ausdruck COMPARE_OP ^ arith_ausdruck )
+            dbg.enterAlt(1);
+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:51:4: arith_ausdruck COMPARE_OP ^ arith_ausdruck
+            {
+            root_0 = (Object)adaptor.nil();
+
+
+            dbg.location(51,4);
+            pushFollow(FOLLOW_arith_ausdruck_in_vergleich381);
+            arith_ausdruck50=arith_ausdruck();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, arith_ausdruck50.getTree());
+            dbg.location(51,29);
+            COMPARE_OP51=(Token)match(input,COMPARE_OP,FOLLOW_COMPARE_OP_in_vergleich383); 
+            COMPARE_OP51_tree = 
+            (Object)adaptor.create(COMPARE_OP51)
+            ;
+            root_0 = (Object)adaptor.becomeRoot(COMPARE_OP51_tree, root_0);
+
+            dbg.location(51,31);
+            pushFollow(FOLLOW_arith_ausdruck_in_vergleich386);
+            arith_ausdruck52=arith_ausdruck();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, arith_ausdruck52.getTree());
+
+            }
+
+            retval.stop = input.LT(-1);
+
+
+            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
+
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        dbg.location(51, 44);
 
         }
         finally {
@@ -2006,7 +2297,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "elihw"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:45:1: elihw : 'while' vergleich 'do' ( anweisung )+ 'od' ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:53:1: elihw : 'while' vergleich 'do' ( anweisung )+ 'od' -> ^( 'while' vergleich ( anweisung )+ ) ;
     public final MiniPParser.elihw_return elihw() throws RecognitionException {
         MiniPParser.elihw_return retval = new MiniPParser.elihw_return();
         retval.start = input.LT(1);
@@ -2014,55 +2305,50 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal50=null;
-        Token string_literal52=null;
-        Token string_literal54=null;
-        MiniPParser.vergleich_return vergleich51 =null;
+        Token string_literal53=null;
+        Token string_literal55=null;
+        Token string_literal57=null;
+        MiniPParser.vergleich_return vergleich54 =null;
 
-        MiniPParser.anweisung_return anweisung53 =null;
+        MiniPParser.anweisung_return anweisung56 =null;
 
 
-        Object string_literal50_tree=null;
-        Object string_literal52_tree=null;
-        Object string_literal54_tree=null;
-
+        Object string_literal53_tree=null;
+        Object string_literal55_tree=null;
+        Object string_literal57_tree=null;
+        RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
+        RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+        RewriteRuleTokenStream stream_41=new RewriteRuleTokenStream(adaptor,"token 41");
+        RewriteRuleSubtreeStream stream_anweisung=new RewriteRuleSubtreeStream(adaptor,"rule anweisung");
+        RewriteRuleSubtreeStream stream_vergleich=new RewriteRuleSubtreeStream(adaptor,"rule vergleich");
         try { dbg.enterRule(getGrammarFileName(), "elihw");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(45, 0);
+        dbg.location(53, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:46:2: ( 'while' vergleich 'do' ( anweisung )+ 'od' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:54:2: ( 'while' vergleich 'do' ( anweisung )+ 'od' -> ^( 'while' vergleich ( anweisung )+ ) )
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:46:4: 'while' vergleich 'do' ( anweisung )+ 'od'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:54:4: 'while' vergleich 'do' ( anweisung )+ 'od'
             {
-            root_0 = (Object)adaptor.nil();
+            dbg.location(54,4);
+            string_literal53=(Token)match(input,41,FOLLOW_41_in_elihw395);  
+            stream_41.add(string_literal53);
 
-
-            dbg.location(46,4);
-            string_literal50=(Token)match(input,40,FOLLOW_40_in_elihw326); 
-            string_literal50_tree = 
-            (Object)adaptor.create(string_literal50)
-            ;
-            adaptor.addChild(root_0, string_literal50_tree);
-
-            dbg.location(46,12);
-            pushFollow(FOLLOW_vergleich_in_elihw328);
-            vergleich51=vergleich();
+            dbg.location(54,12);
+            pushFollow(FOLLOW_vergleich_in_elihw397);
+            vergleich54=vergleich();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, vergleich51.getTree());
-            dbg.location(46,22);
-            string_literal52=(Token)match(input,32,FOLLOW_32_in_elihw330); 
-            string_literal52_tree = 
-            (Object)adaptor.create(string_literal52)
-            ;
-            adaptor.addChild(root_0, string_literal52_tree);
+            stream_vergleich.add(vergleich54.getTree());
+            dbg.location(54,22);
+            string_literal55=(Token)match(input,33,FOLLOW_33_in_elihw399);  
+            stream_33.add(string_literal55);
 
-            dbg.location(46,27);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:46:27: ( anweisung )+
+            dbg.location(54,27);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:54:27: ( anweisung )+
             int cnt15=0;
             try { dbg.enterSubRule(15);
 
@@ -2073,7 +2359,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 int LA15_0 = input.LA(1);
 
-                if ( ((LA15_0 >= IDENTIFIER && LA15_0 <= INTEGER)||LA15_0==REAL||LA15_0==23||LA15_0==26||LA15_0==28||LA15_0==35||(LA15_0 >= 37 && LA15_0 <= 38)||LA15_0==40) ) {
+                if ( ((LA15_0 >= IDENTIFIER && LA15_0 <= INTEGER)||LA15_0==REAL||LA15_0==24||LA15_0==27||LA15_0==29||LA15_0==36||(LA15_0 >= 38 && LA15_0 <= 39)||LA15_0==41) ) {
                     alt15=1;
                 }
 
@@ -2084,15 +2370,15 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:46:27: anweisung
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:54:27: anweisung
             	    {
-            	    dbg.location(46,27);
-            	    pushFollow(FOLLOW_anweisung_in_elihw332);
-            	    anweisung53=anweisung();
+            	    dbg.location(54,27);
+            	    pushFollow(FOLLOW_anweisung_in_elihw401);
+            	    anweisung56=anweisung();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, anweisung53.getTree());
+            	    stream_anweisung.add(anweisung56.getTree());
 
             	    }
             	    break;
@@ -2109,13 +2395,53 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
             } finally {dbg.exitSubRule(15);}
 
-            dbg.location(46,38);
-            string_literal54=(Token)match(input,36,FOLLOW_36_in_elihw335); 
-            string_literal54_tree = 
-            (Object)adaptor.create(string_literal54)
-            ;
-            adaptor.addChild(root_0, string_literal54_tree);
+            dbg.location(54,38);
+            string_literal57=(Token)match(input,37,FOLLOW_37_in_elihw404);  
+            stream_37.add(string_literal57);
 
+
+            // AST REWRITE
+            // elements: 41, vergleich, anweisung
+            // token labels: 
+            // rule labels: retval
+            // token list labels: 
+            // rule list labels: 
+            // wildcard labels: 
+            retval.tree = root_0;
+            RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
+            root_0 = (Object)adaptor.nil();
+            // 54:43: -> ^( 'while' vergleich ( anweisung )+ )
+            {
+                dbg.location(54,46);
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:54:46: ^( 'while' vergleich ( anweisung )+ )
+                {
+                Object root_1 = (Object)adaptor.nil();
+                dbg.location(54,48);
+                root_1 = (Object)adaptor.becomeRoot(
+                stream_41.nextNode()
+                , root_1);
+
+                dbg.location(54,56);
+                adaptor.addChild(root_1, stream_vergleich.nextTree());
+                dbg.location(54,66);
+                if ( !(stream_anweisung.hasNext()) ) {
+                    throw new RewriteEarlyExitException();
+                }
+                while ( stream_anweisung.hasNext() ) {
+                    dbg.location(54,66);
+                    adaptor.addChild(root_1, stream_anweisung.nextTree());
+
+                }
+                stream_anweisung.reset();
+
+                adaptor.addChild(root_0, root_1);
+                }
+
+            }
+
+
+            retval.tree = root_0;
 
             }
 
@@ -2136,7 +2462,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(46, 42);
+        dbg.location(54, 76);
 
         }
         finally {
@@ -2157,7 +2483,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "read"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:48:1: read : 'read(' IDENTIFIER ')' ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:56:1: read : 'read' ^ '(' ! IDENTIFIER ')' !;
     public final MiniPParser.read_return read() throws RecognitionException {
         MiniPParser.read_return retval = new MiniPParser.read_return();
         retval.start = input.LT(1);
@@ -2165,49 +2491,48 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal55=null;
-        Token IDENTIFIER56=null;
-        Token char_literal57=null;
+        Token string_literal58=null;
+        Token char_literal59=null;
+        Token IDENTIFIER60=null;
+        Token char_literal61=null;
 
-        Object string_literal55_tree=null;
-        Object IDENTIFIER56_tree=null;
-        Object char_literal57_tree=null;
+        Object string_literal58_tree=null;
+        Object char_literal59_tree=null;
+        Object IDENTIFIER60_tree=null;
+        Object char_literal61_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "read");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(48, 0);
+        dbg.location(56, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:49:2: ( 'read(' IDENTIFIER ')' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:57:2: ( 'read' ^ '(' ! IDENTIFIER ')' !)
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:49:4: 'read(' IDENTIFIER ')'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:57:4: 'read' ^ '(' ! IDENTIFIER ')' !
             {
             root_0 = (Object)adaptor.nil();
 
 
-            dbg.location(49,4);
-            string_literal55=(Token)match(input,38,FOLLOW_38_in_read347); 
-            string_literal55_tree = 
-            (Object)adaptor.create(string_literal55)
+            dbg.location(57,10);
+            string_literal58=(Token)match(input,39,FOLLOW_39_in_read426); 
+            string_literal58_tree = 
+            (Object)adaptor.create(string_literal58)
             ;
-            adaptor.addChild(root_0, string_literal55_tree);
+            root_0 = (Object)adaptor.becomeRoot(string_literal58_tree, root_0);
 
-            dbg.location(49,12);
-            IDENTIFIER56=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_read349); 
-            IDENTIFIER56_tree = 
-            (Object)adaptor.create(IDENTIFIER56)
+            dbg.location(57,15);
+            char_literal59=(Token)match(input,24,FOLLOW_24_in_read429); 
+            dbg.location(57,17);
+            IDENTIFIER60=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_read432); 
+            IDENTIFIER60_tree = 
+            (Object)adaptor.create(IDENTIFIER60)
             ;
-            adaptor.addChild(root_0, IDENTIFIER56_tree);
+            adaptor.addChild(root_0, IDENTIFIER60_tree);
 
-            dbg.location(49,23);
-            char_literal57=(Token)match(input,24,FOLLOW_24_in_read351); 
-            char_literal57_tree = 
-            (Object)adaptor.create(char_literal57)
-            ;
-            adaptor.addChild(root_0, char_literal57_tree);
-
+            dbg.location(57,31);
+            char_literal61=(Token)match(input,25,FOLLOW_25_in_read434); 
 
             }
 
@@ -2228,7 +2553,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(49, 26);
+        dbg.location(57, 32);
 
         }
         finally {
@@ -2249,7 +2574,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "println"
-    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:51:1: println : 'println(' ( arith_ausdruck | STRING ) ')' ;
+    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:59:1: println : 'println' ^ '(' ! ( arith_ausdruck | STRING ) ')' !;
     public final MiniPParser.println_return println() throws RecognitionException {
         MiniPParser.println_return retval = new MiniPParser.println_return();
         retval.start = input.LT(1);
@@ -2257,46 +2582,50 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal58=null;
-        Token STRING60=null;
-        Token char_literal61=null;
-        MiniPParser.arith_ausdruck_return arith_ausdruck59 =null;
+        Token string_literal62=null;
+        Token char_literal63=null;
+        Token STRING65=null;
+        Token char_literal66=null;
+        MiniPParser.arith_ausdruck_return arith_ausdruck64 =null;
 
 
-        Object string_literal58_tree=null;
-        Object STRING60_tree=null;
-        Object char_literal61_tree=null;
+        Object string_literal62_tree=null;
+        Object char_literal63_tree=null;
+        Object STRING65_tree=null;
+        Object char_literal66_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "println");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(51, 0);
+        dbg.location(59, 0);
 
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:52:2: ( 'println(' ( arith_ausdruck | STRING ) ')' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:60:2: ( 'println' ^ '(' ! ( arith_ausdruck | STRING ) ')' !)
             dbg.enterAlt(1);
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:52:4: 'println(' ( arith_ausdruck | STRING ) ')'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:60:4: 'println' ^ '(' ! ( arith_ausdruck | STRING ) ')' !
             {
             root_0 = (Object)adaptor.nil();
 
 
-            dbg.location(52,4);
-            string_literal58=(Token)match(input,37,FOLLOW_37_in_println363); 
-            string_literal58_tree = 
-            (Object)adaptor.create(string_literal58)
+            dbg.location(60,13);
+            string_literal62=(Token)match(input,38,FOLLOW_38_in_println447); 
+            string_literal62_tree = 
+            (Object)adaptor.create(string_literal62)
             ;
-            adaptor.addChild(root_0, string_literal58_tree);
+            root_0 = (Object)adaptor.becomeRoot(string_literal62_tree, root_0);
 
-            dbg.location(52,15);
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:52:15: ( arith_ausdruck | STRING )
+            dbg.location(60,18);
+            char_literal63=(Token)match(input,24,FOLLOW_24_in_println450); 
+            dbg.location(60,20);
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:60:20: ( arith_ausdruck | STRING )
             int alt16=2;
             try { dbg.enterSubRule(16);
             try { dbg.enterDecision(16, decisionCanBacktrack[16]);
 
             int LA16_0 = input.LA(1);
 
-            if ( ((LA16_0 >= IDENTIFIER && LA16_0 <= INTEGER)||LA16_0==REAL||LA16_0==23||LA16_0==26||LA16_0==28) ) {
+            if ( ((LA16_0 >= IDENTIFIER && LA16_0 <= INTEGER)||LA16_0==REAL||LA16_0==24||LA16_0==27||LA16_0==29) ) {
                 alt16=1;
             }
             else if ( (LA16_0==STRING) ) {
@@ -2316,29 +2645,29 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:52:16: arith_ausdruck
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:60:21: arith_ausdruck
                     {
-                    dbg.location(52,16);
-                    pushFollow(FOLLOW_arith_ausdruck_in_println366);
-                    arith_ausdruck59=arith_ausdruck();
+                    dbg.location(60,21);
+                    pushFollow(FOLLOW_arith_ausdruck_in_println454);
+                    arith_ausdruck64=arith_ausdruck();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, arith_ausdruck59.getTree());
+                    adaptor.addChild(root_0, arith_ausdruck64.getTree());
 
                     }
                     break;
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:52:33: STRING
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:60:38: STRING
                     {
-                    dbg.location(52,33);
-                    STRING60=(Token)match(input,STRING,FOLLOW_STRING_in_println370); 
-                    STRING60_tree = 
-                    (Object)adaptor.create(STRING60)
+                    dbg.location(60,38);
+                    STRING65=(Token)match(input,STRING,FOLLOW_STRING_in_println458); 
+                    STRING65_tree = 
+                    (Object)adaptor.create(STRING65)
                     ;
-                    adaptor.addChild(root_0, STRING60_tree);
+                    adaptor.addChild(root_0, STRING65_tree);
 
 
                     }
@@ -2347,13 +2676,8 @@ public TreeAdaptor getTreeAdaptor() {
             }
             } finally {dbg.exitSubRule(16);}
 
-            dbg.location(52,41);
-            char_literal61=(Token)match(input,24,FOLLOW_24_in_println373); 
-            char_literal61_tree = 
-            (Object)adaptor.create(char_literal61)
-            ;
-            adaptor.addChild(root_0, char_literal61_tree);
-
+            dbg.location(60,49);
+            char_literal66=(Token)match(input,25,FOLLOW_25_in_println461); 
 
             }
 
@@ -2374,7 +2698,7 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(52, 44);
+        dbg.location(60, 50);
 
         }
         finally {
@@ -2392,64 +2716,69 @@ public TreeAdaptor getTreeAdaptor() {
 
  
 
-    public static final BitSet FOLLOW_START_TOKEN_in_start29 = new BitSet(new long[]{0x0000000000222090L});
-    public static final BitSet FOLLOW_deklaration_in_start31 = new BitSet(new long[]{0x0000000000222090L});
-    public static final BitSet FOLLOW_BEGIN_TOKEN_in_start34 = new BitSet(new long[]{0x0000016814811800L});
-    public static final BitSet FOLLOW_anweisung_in_start36 = new BitSet(new long[]{0x0000016814811C00L});
-    public static final BitSet FOLLOW_END_TOKEN_in_start39 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_konstanten_in_deklaration52 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_deklaration56 = new BitSet(new long[]{0x0000000088000000L});
-    public static final BitSet FOLLOW_27_in_deklaration59 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_deklaration61 = new BitSet(new long[]{0x0000000088000000L});
-    public static final BitSet FOLLOW_31_in_deklaration65 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_wertzuweisung_in_anweisung109 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_arith_ausdruck_in_anweisung113 = new BitSet(new long[]{0x0000000080000200L});
-    public static final BitSet FOLLOW_s_in_anweisung115 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_read_in_anweisung119 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_println_in_anweisung123 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_fi_in_anweisung127 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_elihw_in_anweisung131 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_anweisung134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_wertzuweisung145 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_wertzuweisung147 = new BitSet(new long[]{0x0000000014911800L});
-    public static final BitSet FOLLOW_STRING_in_wertzuweisung151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_arith_ausdruck_in_wertzuweisung155 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_s_in_wertzuweisung157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMPARE_OP_in_s167 = new BitSet(new long[]{0x0000000014811800L});
-    public static final BitSet FOLLOW_arith_ausdruck_in_s169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_mult_in_arith_ausdruck184 = new BitSet(new long[]{0x0000000014000002L});
-    public static final BitSet FOLLOW_set_in_arith_ausdruck187 = new BitSet(new long[]{0x0000000014811800L});
-    public static final BitSet FOLLOW_mult_in_arith_ausdruck195 = new BitSet(new long[]{0x0000000014000002L});
-    public static final BitSet FOLLOW_atom_in_mult210 = new BitSet(new long[]{0x0000000022000002L});
-    public static final BitSet FOLLOW_set_in_mult213 = new BitSet(new long[]{0x0000000014811800L});
-    public static final BitSet FOLLOW_atom_in_mult221 = new BitSet(new long[]{0x0000000022000002L});
-    public static final BitSet FOLLOW_INTEGER_in_atom245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_REAL_in_atom259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_atom264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_atom269 = new BitSet(new long[]{0x0000000014811800L});
-    public static final BitSet FOLLOW_arith_ausdruck_in_atom271 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_atom273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_fi284 = new BitSet(new long[]{0x0000000014811800L});
-    public static final BitSet FOLLOW_vergleich_in_fi286 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_fi289 = new BitSet(new long[]{0x0000016814811800L});
-    public static final BitSet FOLLOW_anweisung_in_fi291 = new BitSet(new long[]{0x0000016E14811800L});
-    public static final BitSet FOLLOW_33_in_fi295 = new BitSet(new long[]{0x0000016814811800L});
-    public static final BitSet FOLLOW_anweisung_in_fi297 = new BitSet(new long[]{0x0000016C14811800L});
-    public static final BitSet FOLLOW_34_in_fi302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_arith_ausdruck_in_vergleich313 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_COMPARE_OP_in_vergleich315 = new BitSet(new long[]{0x0000000014811800L});
-    public static final BitSet FOLLOW_arith_ausdruck_in_vergleich317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_elihw326 = new BitSet(new long[]{0x0000000014811800L});
-    public static final BitSet FOLLOW_vergleich_in_elihw328 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_elihw330 = new BitSet(new long[]{0x0000016814811800L});
-    public static final BitSet FOLLOW_anweisung_in_elihw332 = new BitSet(new long[]{0x0000017814811800L});
-    public static final BitSet FOLLOW_36_in_elihw335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_read347 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_read349 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_read351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_println363 = new BitSet(new long[]{0x0000000014911800L});
-    public static final BitSet FOLLOW_arith_ausdruck_in_println366 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_STRING_in_println370 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_println373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_START_TOKEN_in_start33 = new BitSet(new long[]{0x0000000000244090L});
+    public static final BitSet FOLLOW_deklaration_in_start36 = new BitSet(new long[]{0x0000000000244090L});
+    public static final BitSet FOLLOW_BEGIN_TOKEN_in_start39 = new BitSet(new long[]{0x000002D029023000L});
+    public static final BitSet FOLLOW_anweisung_in_start42 = new BitSet(new long[]{0x000002D029023800L});
+    public static final BitSet FOLLOW_END_TOKEN_in_start45 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_konstanten_in_deklaration59 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_deklaration63 = new BitSet(new long[]{0x0000000110000000L});
+    public static final BitSet FOLLOW_28_in_deklaration66 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_deklaration68 = new BitSet(new long[]{0x0000000110000000L});
+    public static final BitSet FOLLOW_32_in_deklaration72 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_wertzuweisung_in_anweisung115 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_arith_ausdruck_in_anweisung119 = new BitSet(new long[]{0x0000000100000200L});
+    public static final BitSet FOLLOW_s_in_anweisung121 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_read_in_anweisung125 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_println_in_anweisung129 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_fi_in_anweisung133 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_elihw_in_anweisung137 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_anweisung140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_wertzuweisung152 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_wertzuweisung154 = new BitSet(new long[]{0x0000000029123000L});
+    public static final BitSet FOLLOW_wertzuweisungA_in_wertzuweisung156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_wertzuweisungA177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_arith_ausdruck_in_wertzuweisungA182 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_s_in_wertzuweisungA184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMPARE_OP_in_s192 = new BitSet(new long[]{0x0000000029023000L});
+    public static final BitSet FOLLOW_arith_ausdruck_in_s194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mult_in_arith_ausdruck209 = new BitSet(new long[]{0x0000000028000002L});
+    public static final BitSet FOLLOW_set_in_arith_ausdruck212 = new BitSet(new long[]{0x0000000029023000L});
+    public static final BitSet FOLLOW_mult_in_arith_ausdruck221 = new BitSet(new long[]{0x0000000028000002L});
+    public static final BitSet FOLLOW_atom_in_mult236 = new BitSet(new long[]{0x0000000044000002L});
+    public static final BitSet FOLLOW_set_in_mult239 = new BitSet(new long[]{0x0000000029023000L});
+    public static final BitSet FOLLOW_atom_in_mult248 = new BitSet(new long[]{0x0000000044000002L});
+    public static final BitSet FOLLOW_INTEGER_in_atom272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_REAL_in_atom286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_atom291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_atom296 = new BitSet(new long[]{0x0000000029023000L});
+    public static final BitSet FOLLOW_arith_ausdruck_in_atom299 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_atom301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_fi313 = new BitSet(new long[]{0x0000000029023000L});
+    public static final BitSet FOLLOW_vergleich_in_fi315 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_fi318 = new BitSet(new long[]{0x000002D029023000L});
+    public static final BitSet FOLLOW_ifanweisung_in_fi320 = new BitSet(new long[]{0x000002DC29023000L});
+    public static final BitSet FOLLOW_34_in_fi324 = new BitSet(new long[]{0x000002D029023000L});
+    public static final BitSet FOLLOW_elseanweisung_in_fi326 = new BitSet(new long[]{0x000002D829023000L});
+    public static final BitSet FOLLOW_35_in_fi331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_anweisung_in_ifanweisung362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_anweisung_in_elseanweisung371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_arith_ausdruck_in_vergleich381 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_COMPARE_OP_in_vergleich383 = new BitSet(new long[]{0x0000000029023000L});
+    public static final BitSet FOLLOW_arith_ausdruck_in_vergleich386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_elihw395 = new BitSet(new long[]{0x0000000029023000L});
+    public static final BitSet FOLLOW_vergleich_in_elihw397 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_elihw399 = new BitSet(new long[]{0x000002D029023000L});
+    public static final BitSet FOLLOW_anweisung_in_elihw401 = new BitSet(new long[]{0x000002F029023000L});
+    public static final BitSet FOLLOW_37_in_elihw404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_read426 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_read429 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_read432 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_read434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_println447 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_println450 = new BitSet(new long[]{0x0000000029123000L});
+    public static final BitSet FOLLOW_arith_ausdruck_in_println454 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_STRING_in_println458 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_println461 = new BitSet(new long[]{0x0000000000000002L});
 
 }

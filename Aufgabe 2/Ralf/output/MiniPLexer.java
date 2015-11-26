@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g 2015-11-11 12:27:55
+// $ANTLR 3.4 Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g 2015-11-26 12:46:38
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -8,7 +8,6 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class MiniPLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__26=26;
@@ -26,25 +25,27 @@ public class MiniPLexer extends Lexer {
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int T__40=40;
+    public static final int T__41=41;
     public static final int BEGIN_TOKEN=4;
     public static final int BLOCK_KOMMENTAR=5;
     public static final int BOOLEAN=6;
     public static final int BOOL_KONSTANTE=7;
     public static final int BUCHSTABE=8;
     public static final int COMPARE_OP=9;
-    public static final int END_TOKEN=10;
-    public static final int IDENTIFIER=11;
-    public static final int INTEGER=12;
-    public static final int INT_KONSTANTE=13;
-    public static final int LEERZEICHEN=14;
-    public static final int NEUE_ZEILE=15;
-    public static final int REAL=16;
-    public static final int REAL_KONSTANTE=17;
-    public static final int SLIST=18;
+    public static final int ELSE=10;
+    public static final int END_TOKEN=11;
+    public static final int IDENTIFIER=12;
+    public static final int INTEGER=13;
+    public static final int INT_KONSTANTE=14;
+    public static final int LEERZEICHEN=15;
+    public static final int NEUE_ZEILE=16;
+    public static final int REAL=17;
+    public static final int REAL_KONSTANTE=18;
     public static final int START_TOKEN=19;
     public static final int STRING=20;
     public static final int STRING_KONSTANTE=21;
-    public static final int ZAHL=22;
+    public static final int THEN=22;
+    public static final int ZAHL=23;
 
     // delegates
     // delegators
@@ -59,38 +60,17 @@ public class MiniPLexer extends Lexer {
     public MiniPLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "/Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g"; }
-
-    // $ANTLR start "T__23"
-    public final void mT__23() throws RecognitionException {
-        try {
-            int _type = T__23;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:2:7: ( '(' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:2:9: '('
-            {
-            match('('); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__23"
+    public String getGrammarFileName() { return "Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g"; }
 
     // $ANTLR start "T__24"
     public final void mT__24() throws RecognitionException {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:3:7: ( ')' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:3:9: ')'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:2:7: ( '(' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:2:9: '('
             {
-            match(')'); 
+            match('('); 
 
             }
 
@@ -108,10 +88,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:4:7: ( '*' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:4:9: '*'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:3:7: ( ')' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:3:9: ')'
             {
-            match('*'); 
+            match(')'); 
 
             }
 
@@ -129,10 +109,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:5:7: ( '+' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:5:9: '+'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:4:7: ( '*' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:4:9: '*'
             {
-            match('+'); 
+            match('*'); 
 
             }
 
@@ -150,10 +130,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:6:7: ( ',' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:6:9: ','
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:5:7: ( '+' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:5:9: '+'
             {
-            match(','); 
+            match('+'); 
 
             }
 
@@ -171,10 +151,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:7:7: ( '-' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:7:9: '-'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:6:7: ( ',' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:6:9: ','
             {
-            match('-'); 
+            match(','); 
 
             }
 
@@ -192,10 +172,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:8:7: ( '/' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:8:9: '/'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:7:7: ( '-' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:7:9: '-'
             {
-            match('/'); 
+            match('-'); 
 
             }
 
@@ -213,12 +193,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:9:7: ( ':=' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:9:9: ':='
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:8:7: ( '/' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:8:9: '/'
             {
-            match(":="); 
-
-
+            match('/'); 
 
             }
 
@@ -236,10 +214,12 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:10:7: ( ';' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:10:9: ';'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:9:7: ( ':=' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:9:9: ':='
             {
-            match(';'); 
+            match(":="); 
+
+
 
             }
 
@@ -257,12 +237,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:11:7: ( 'do' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:11:9: 'do'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:10:7: ( ';' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:10:9: ';'
             {
-            match("do"); 
-
-
+            match(';'); 
 
             }
 
@@ -280,10 +258,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:12:7: ( 'else' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:12:9: 'else'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:11:7: ( 'do' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:11:9: 'do'
             {
-            match("else"); 
+            match("do"); 
 
 
 
@@ -303,10 +281,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:13:7: ( 'fi' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:13:9: 'fi'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:12:7: ( 'else' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:12:9: 'else'
             {
-            match("fi"); 
+            match("else"); 
 
 
 
@@ -326,10 +304,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:14:7: ( 'if' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:14:9: 'if'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:13:7: ( 'fi' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:13:9: 'fi'
             {
-            match("if"); 
+            match("fi"); 
 
 
 
@@ -349,10 +327,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:15:7: ( 'od' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:15:9: 'od'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:14:7: ( 'if' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:14:9: 'if'
             {
-            match("od"); 
+            match("if"); 
 
 
 
@@ -372,10 +350,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:16:7: ( 'println(' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:16:9: 'println('
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:15:7: ( 'od' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:15:9: 'od'
             {
-            match("println("); 
+            match("od"); 
 
 
 
@@ -395,10 +373,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:17:7: ( 'read(' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:17:9: 'read('
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:16:7: ( 'println' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:16:9: 'println'
             {
-            match("read("); 
+            match("println"); 
 
 
 
@@ -418,10 +396,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:7: ( 'then' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:18:9: 'then'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:17:7: ( 'read' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:17:9: 'read'
             {
-            match("then"); 
+            match("read"); 
 
 
 
@@ -441,10 +419,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:19:7: ( 'while' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:19:9: 'while'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:18:7: ( 'then' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:18:9: 'then'
             {
-            match("while"); 
+            match("then"); 
 
 
 
@@ -459,13 +437,36 @@ public class MiniPLexer extends Lexer {
     }
     // $ANTLR end "T__40"
 
+    // $ANTLR start "T__41"
+    public final void mT__41() throws RecognitionException {
+        try {
+            int _type = T__41;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:7: ( 'while' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:19:9: 'while'
+            {
+            match("while"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__41"
+
     // $ANTLR start "START_TOKEN"
     public final void mSTART_TOKEN() throws RecognitionException {
         try {
             int _type = START_TOKEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:56:2: ( 'program' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:56:4: 'program'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:64:2: ( 'program' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:64:4: 'program'
             {
             match("program"); 
 
@@ -487,8 +488,8 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = BEGIN_TOKEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:58:2: ( 'begin' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:58:4: 'begin'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:66:2: ( 'begin' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:66:4: 'begin'
             {
             match("begin"); 
 
@@ -510,8 +511,8 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = END_TOKEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:60:2: ( 'end' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:60:4: 'end'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:68:2: ( 'end' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:68:4: 'end'
             {
             match("end"); 
 
@@ -533,8 +534,8 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = INT_KONSTANTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:64:2: ( 'integer' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:64:4: 'integer'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:72:2: ( 'integer' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:72:4: 'integer'
             {
             match("integer"); 
 
@@ -556,8 +557,8 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = REAL_KONSTANTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:66:2: ( 'real' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:66:4: 'real'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:74:2: ( 'real' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:74:4: 'real'
             {
             match("real"); 
 
@@ -579,8 +580,8 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = STRING_KONSTANTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:68:2: ( 'string' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:68:4: 'string'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:76:2: ( 'string' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:76:4: 'string'
             {
             match("string"); 
 
@@ -602,8 +603,8 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = BOOL_KONSTANTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:70:2: ( 'boolean' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:70:4: 'boolean'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:78:2: ( 'boolean' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:78:4: 'boolean'
             {
             match("boolean"); 
 
@@ -625,7 +626,7 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:73:2: ( 'true' | 'false' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:81:2: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -644,7 +645,7 @@ public class MiniPLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:73:5: 'true'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:81:5: 'true'
                     {
                     match("true"); 
 
@@ -653,7 +654,7 @@ public class MiniPLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:73:14: 'false'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:81:14: 'false'
                     {
                     match("false"); 
 
@@ -677,10 +678,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = COMPARE_OP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:76:2: ( ( '=' | '<' | '>' | '<>' | '<= ' | '>=' ) )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:76:5: ( '=' | '<' | '>' | '<>' | '<= ' | '>=' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:84:2: ( ( '=' | '<' | '>' | '<>' | '<= ' | '>=' ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:84:5: ( '=' | '<' | '>' | '<>' | '<= ' | '>=' )
             {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:76:5: ( '=' | '<' | '>' | '<>' | '<= ' | '>=' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:84:5: ( '=' | '<' | '>' | '<>' | '<= ' | '>=' )
             int alt2=6;
             switch ( input.LA(1) ) {
             case '=':
@@ -729,28 +730,28 @@ public class MiniPLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:76:6: '='
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:84:6: '='
                     {
                     match('='); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:76:12: '<'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:84:12: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 3 :
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:76:18: '>'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:84:18: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 4 :
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:76:24: '<>'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:84:24: '<>'
                     {
                     match("<>"); 
 
@@ -759,7 +760,7 @@ public class MiniPLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:76:31: '<= '
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:84:31: '<= '
                     {
                     match("<= "); 
 
@@ -768,7 +769,7 @@ public class MiniPLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:76:38: '>='
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:84:38: '>='
                     {
                     match(">="); 
 
@@ -796,13 +797,13 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = IDENTIFIER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:79:2: ( BUCHSTABE ( BUCHSTABE | ZAHL | '_' )* )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:79:4: BUCHSTABE ( BUCHSTABE | ZAHL | '_' )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:87:2: ( BUCHSTABE ( BUCHSTABE | ZAHL | '_' )* )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:87:4: BUCHSTABE ( BUCHSTABE | ZAHL | '_' )*
             {
             mBUCHSTABE(); 
 
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:79:14: ( BUCHSTABE | ZAHL | '_' )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:87:14: ( BUCHSTABE | ZAHL | '_' )*
             loop3:
             do {
                 int alt3=2;
@@ -815,7 +816,7 @@ public class MiniPLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -852,10 +853,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:82:2: ( ( ZAHL )+ )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:82:4: ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:90:2: ( ( ZAHL )+ )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:90:4: ( ZAHL )+
             {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:82:4: ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:90:4: ( ZAHL )+
             int cnt4=0;
             loop4:
             do {
@@ -869,7 +870,7 @@ public class MiniPLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -910,10 +911,10 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = REAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:84:2: ( ( ZAHL )+ '.' ( ZAHL )+ )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:84:4: ( ZAHL )+ '.' ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:92:2: ( ( ZAHL )+ '.' ( ZAHL )+ )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:92:4: ( ZAHL )+ '.' ( ZAHL )+
             {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:84:4: ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:92:4: ( ZAHL )+
             int cnt5=0;
             loop5:
             do {
@@ -927,7 +928,7 @@ public class MiniPLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -954,7 +955,7 @@ public class MiniPLexer extends Lexer {
 
             match('.'); 
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:84:12: ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:92:12: ( ZAHL )+
             int cnt6=0;
             loop6:
             do {
@@ -968,7 +969,7 @@ public class MiniPLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1009,12 +1010,12 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:86:2: ( '\\'' ( BUCHSTABE | ZAHL | ' ' )* '\\'' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:86:3: '\\'' ( BUCHSTABE | ZAHL | ' ' )* '\\''
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:94:2: ( '\\'' ( BUCHSTABE | ZAHL | ' ' )* '\\'' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:94:3: '\\'' ( BUCHSTABE | ZAHL | ' ' )* '\\''
             {
             match('\''); 
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:86:8: ( BUCHSTABE | ZAHL | ' ' )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:94:8: ( BUCHSTABE | ZAHL | ' ' )*
             loop7:
             do {
                 int alt7=2;
@@ -1027,7 +1028,7 @@ public class MiniPLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
             	    {
             	    if ( input.LA(1)==' '||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -1064,8 +1065,8 @@ public class MiniPLexer extends Lexer {
     // $ANTLR start "ZAHL"
     public final void mZAHL() throws RecognitionException {
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:89:2: ( ( '0' .. '9' ) )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:97:2: ( ( '0' .. '9' ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                 input.consume();
@@ -1090,8 +1091,8 @@ public class MiniPLexer extends Lexer {
     // $ANTLR start "BUCHSTABE"
     public final void mBUCHSTABE() throws RecognitionException {
         try {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:91:2: ( 'a' .. 'z' | 'A' .. 'Z' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:99:2: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1118,14 +1119,14 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = BLOCK_KOMMENTAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:94:2: ( '/*' ( . )* '*/' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:94:4: '/*' ( . )* '*/'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:102:2: ( '/*' ( . )* '*/' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:102:4: '/*' ( . )* '*/'
             {
             match("/*"); 
 
 
 
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:94:9: ( . )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:102:9: ( . )*
             loop8:
             do {
                 int alt8=2;
@@ -1150,7 +1151,7 @@ public class MiniPLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:94:9: .
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:102:9: .
             	    {
             	    matchAny(); 
 
@@ -1185,8 +1186,8 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = LEERZEICHEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:96:2: ( ( ' ' | '\\t' ) )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:96:4: ( ' ' | '\\t' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:104:2: ( ( ' ' | '\\t' ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:104:4: ( ' ' | '\\t' )
             {
             if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1216,13 +1217,13 @@ public class MiniPLexer extends Lexer {
         try {
             int _type = NEUE_ZEILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:98:2: ( ( ( '\\r' )? '\\n' ) )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:98:4: ( ( '\\r' )? '\\n' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:106:2: ( ( ( '\\r' )? '\\n' ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:106:4: ( ( '\\r' )? '\\n' )
             {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:98:4: ( ( '\\r' )? '\\n' )
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:98:5: ( '\\r' )? '\\n'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:106:4: ( ( '\\r' )? '\\n' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:106:5: ( '\\r' )? '\\n'
             {
-            // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:98:5: ( '\\r' )?
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:106:5: ( '\\r' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1231,7 +1232,7 @@ public class MiniPLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:98:5: '\\r'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:106:5: '\\r'
                     {
                     match('\r'); 
 
@@ -1260,156 +1261,156 @@ public class MiniPLexer extends Lexer {
     // $ANTLR end "NEUE_ZEILE"
 
     public void mTokens() throws RecognitionException {
-        // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:8: ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | START_TOKEN | BEGIN_TOKEN | END_TOKEN | INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE | BOOLEAN | COMPARE_OP | IDENTIFIER | INTEGER | REAL | STRING | BLOCK_KOMMENTAR | LEERZEICHEN | NEUE_ZEILE )
+        // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:8: ( T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | START_TOKEN | BEGIN_TOKEN | END_TOKEN | INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE | BOOLEAN | COMPARE_OP | IDENTIFIER | INTEGER | REAL | STRING | BLOCK_KOMMENTAR | LEERZEICHEN | NEUE_ZEILE )
         int alt10=34;
         alt10 = dfa10.predict(input);
         switch (alt10) {
             case 1 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:10: T__23
-                {
-                mT__23(); 
-
-
-                }
-                break;
-            case 2 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:16: T__24
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:10: T__24
                 {
                 mT__24(); 
 
 
                 }
                 break;
-            case 3 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:22: T__25
+            case 2 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:16: T__25
                 {
                 mT__25(); 
 
 
                 }
                 break;
-            case 4 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:28: T__26
+            case 3 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:22: T__26
                 {
                 mT__26(); 
 
 
                 }
                 break;
-            case 5 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:34: T__27
+            case 4 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:28: T__27
                 {
                 mT__27(); 
 
 
                 }
                 break;
-            case 6 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:40: T__28
+            case 5 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:34: T__28
                 {
                 mT__28(); 
 
 
                 }
                 break;
-            case 7 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:46: T__29
+            case 6 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:40: T__29
                 {
                 mT__29(); 
 
 
                 }
                 break;
-            case 8 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:52: T__30
+            case 7 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:46: T__30
                 {
                 mT__30(); 
 
 
                 }
                 break;
-            case 9 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:58: T__31
+            case 8 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:52: T__31
                 {
                 mT__31(); 
 
 
                 }
                 break;
-            case 10 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:64: T__32
+            case 9 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:58: T__32
                 {
                 mT__32(); 
 
 
                 }
                 break;
-            case 11 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:70: T__33
+            case 10 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:64: T__33
                 {
                 mT__33(); 
 
 
                 }
                 break;
-            case 12 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:76: T__34
+            case 11 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:70: T__34
                 {
                 mT__34(); 
 
 
                 }
                 break;
-            case 13 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:82: T__35
+            case 12 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:76: T__35
                 {
                 mT__35(); 
 
 
                 }
                 break;
-            case 14 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:88: T__36
+            case 13 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:82: T__36
                 {
                 mT__36(); 
 
 
                 }
                 break;
-            case 15 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:94: T__37
+            case 14 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:88: T__37
                 {
                 mT__37(); 
 
 
                 }
                 break;
-            case 16 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:100: T__38
+            case 15 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:94: T__38
                 {
                 mT__38(); 
 
 
                 }
                 break;
-            case 17 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:106: T__39
+            case 16 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:100: T__39
                 {
                 mT__39(); 
 
 
                 }
                 break;
-            case 18 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:112: T__40
+            case 17 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:106: T__40
                 {
                 mT__40(); 
 
 
                 }
                 break;
+            case 18 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:112: T__41
+                {
+                mT__41(); 
+
+
+                }
+                break;
             case 19 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:118: START_TOKEN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:118: START_TOKEN
                 {
                 mSTART_TOKEN(); 
 
@@ -1417,7 +1418,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:130: BEGIN_TOKEN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:130: BEGIN_TOKEN
                 {
                 mBEGIN_TOKEN(); 
 
@@ -1425,7 +1426,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:142: END_TOKEN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:142: END_TOKEN
                 {
                 mEND_TOKEN(); 
 
@@ -1433,7 +1434,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:152: INT_KONSTANTE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:152: INT_KONSTANTE
                 {
                 mINT_KONSTANTE(); 
 
@@ -1441,7 +1442,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:166: REAL_KONSTANTE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:166: REAL_KONSTANTE
                 {
                 mREAL_KONSTANTE(); 
 
@@ -1449,7 +1450,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:181: STRING_KONSTANTE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:181: STRING_KONSTANTE
                 {
                 mSTRING_KONSTANTE(); 
 
@@ -1457,7 +1458,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:198: BOOL_KONSTANTE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:198: BOOL_KONSTANTE
                 {
                 mBOOL_KONSTANTE(); 
 
@@ -1465,7 +1466,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:213: BOOLEAN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:213: BOOLEAN
                 {
                 mBOOLEAN(); 
 
@@ -1473,7 +1474,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:221: COMPARE_OP
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:221: COMPARE_OP
                 {
                 mCOMPARE_OP(); 
 
@@ -1481,7 +1482,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:232: IDENTIFIER
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:232: IDENTIFIER
                 {
                 mIDENTIFIER(); 
 
@@ -1489,7 +1490,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:243: INTEGER
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:243: INTEGER
                 {
                 mINTEGER(); 
 
@@ -1497,7 +1498,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:251: REAL
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:251: REAL
                 {
                 mREAL(); 
 
@@ -1505,7 +1506,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:256: STRING
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:256: STRING
                 {
                 mSTRING(); 
 
@@ -1513,7 +1514,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:263: BLOCK_KOMMENTAR
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:263: BLOCK_KOMMENTAR
                 {
                 mBLOCK_KOMMENTAR(); 
 
@@ -1521,7 +1522,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:279: LEERZEICHEN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:279: LEERZEICHEN
                 {
                 mLEERZEICHEN(); 
 
@@ -1529,7 +1530,7 @@ public class MiniPLexer extends Lexer {
                 }
                 break;
             case 34 :
-                // /Users/lewis/FH/CIP/Aufgabe 2/Ralf/MiniP.g:1:291: NEUE_ZEILE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Ralf\\MiniP.g:1:291: NEUE_ZEILE
                 {
                 mNEUE_ZEILE(); 
 
@@ -1546,9 +1547,9 @@ public class MiniPLexer extends Lexer {
     static final String DFA10_eotS =
         "\7\uffff\1\34\2\uffff\13\26\2\uffff\1\55\5\uffff\1\57\2\26\1\62"+
         "\1\26\1\64\1\26\1\66\10\26\3\uffff\1\26\1\101\1\uffff\1\26\1\uffff"+
-        "\1\26\1\uffff\11\26\1\116\1\uffff\5\26\1\124\1\125\1\126\4\26\1"+
-        "\uffff\1\126\3\26\4\uffff\1\136\1\137\5\26\2\uffff\1\26\1\146\1"+
-        "\147\1\26\1\151\1\152\5\uffff";
+        "\1\26\1\uffff\11\26\1\116\1\uffff\4\26\1\123\1\124\1\125\1\126\4"+
+        "\26\1\uffff\1\126\3\26\4\uffff\1\136\1\137\5\26\2\uffff\1\26\1\146"+
+        "\1\147\1\150\1\151\1\152\5\uffff";
     static final String DFA10_eofS =
         "\153\uffff";
     static final String DFA10_minS =
@@ -1557,18 +1558,18 @@ public class MiniPLexer extends Lexer {
         "\1\154\1\60\1\164\1\60\1\151\1\141\1\145\1\165\1\151\1\147\1\157"+
         "\1\162\3\uffff\1\145\1\60\1\uffff\1\163\1\uffff\1\145\1\uffff\1"+
         "\156\1\147\1\144\1\156\1\145\1\154\1\151\1\154\1\151\1\60\1\uffff"+
-        "\1\145\1\147\1\164\1\162\1\50\3\60\1\145\1\156\1\145\1\156\1\uffff"+
-        "\1\60\1\145\1\154\1\141\4\uffff\2\60\1\141\1\147\1\162\1\156\1\155"+
-        "\2\uffff\1\156\2\60\1\50\2\60\5\uffff";
+        "\1\145\1\147\1\164\1\162\4\60\1\145\1\156\1\145\1\156\1\uffff\1"+
+        "\60\1\145\1\154\1\141\4\uffff\2\60\1\141\1\147\1\162\1\156\1\155"+
+        "\2\uffff\1\156\5\60\5\uffff";
     static final String DFA10_maxS =
         "\1\172\6\uffff\1\52\2\uffff\1\157\1\156\1\151\1\156\1\144\1\162"+
         "\1\145\1\162\1\150\1\157\1\164\2\uffff\1\71\5\uffff\1\172\1\163"+
         "\1\144\1\172\1\154\1\172\1\164\1\172\1\157\1\141\1\145\1\165\1\151"+
         "\1\147\1\157\1\162\3\uffff\1\145\1\172\1\uffff\1\163\1\uffff\1\145"+
         "\1\uffff\1\156\1\147\1\154\1\156\1\145\1\154\1\151\1\154\1\151\1"+
-        "\172\1\uffff\1\145\1\147\1\164\1\162\1\50\3\172\1\145\1\156\1\145"+
-        "\1\156\1\uffff\1\172\1\145\1\154\1\141\4\uffff\2\172\1\141\1\147"+
-        "\1\162\1\156\1\155\2\uffff\1\156\2\172\1\50\2\172\5\uffff";
+        "\172\1\uffff\1\145\1\147\1\164\1\162\4\172\1\145\1\156\1\145\1\156"+
+        "\1\uffff\1\172\1\145\1\154\1\141\4\uffff\2\172\1\141\1\147\1\162"+
+        "\1\156\1\155\2\uffff\1\156\5\172\5\uffff";
     static final String DFA10_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\uffff\1\10\1\11\13\uffff\1\33"+
         "\1\34\1\uffff\1\37\1\41\1\42\1\40\1\7\20\uffff\1\35\1\36\1\12\2"+
@@ -1651,7 +1652,7 @@ public class MiniPLexer extends Lexer {
             "\1\120",
             "\1\121",
             "\1\122",
-            "\1\123",
+            "\12\26\7\uffff\32\26\4\uffff\1\26\1\uffff\32\26",
             "\12\26\7\uffff\32\26\4\uffff\1\26\1\uffff\32\26",
             "\12\26\7\uffff\32\26\4\uffff\1\26\1\uffff\32\26",
             "\12\26\7\uffff\32\26\4\uffff\1\26\1\uffff\32\26",
@@ -1680,7 +1681,7 @@ public class MiniPLexer extends Lexer {
             "\1\145",
             "\12\26\7\uffff\32\26\4\uffff\1\26\1\uffff\32\26",
             "\12\26\7\uffff\32\26\4\uffff\1\26\1\uffff\32\26",
-            "\1\150",
+            "\12\26\7\uffff\32\26\4\uffff\1\26\1\uffff\32\26",
             "\12\26\7\uffff\32\26\4\uffff\1\26\1\uffff\32\26",
             "\12\26\7\uffff\32\26\4\uffff\1\26\1\uffff\32\26",
             "",
@@ -1720,7 +1721,7 @@ public class MiniPLexer extends Lexer {
             this.transition = DFA10_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | START_TOKEN | BEGIN_TOKEN | END_TOKEN | INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE | BOOLEAN | COMPARE_OP | IDENTIFIER | INTEGER | REAL | STRING | BLOCK_KOMMENTAR | LEERZEICHEN | NEUE_ZEILE );";
+            return "1:1: Tokens : ( T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | START_TOKEN | BEGIN_TOKEN | END_TOKEN | INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE | BOOLEAN | COMPARE_OP | IDENTIFIER | INTEGER | REAL | STRING | BLOCK_KOMMENTAR | LEERZEICHEN | NEUE_ZEILE );";
         }
     }
  

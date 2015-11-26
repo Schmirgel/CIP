@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g 2015-11-24 16:52:50
+// $ANTLR 3.4 Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g 2015-11-26 13:49:21
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -8,9 +8,6 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class AST_MiniPLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__29=29;
-    public static final int T__30=30;
-    public static final int T__31=31;
     public static final int T__32=32;
     public static final int T__33=33;
     public static final int T__34=34;
@@ -26,31 +23,37 @@ public class AST_MiniPLexer extends Lexer {
     public static final int T__44=44;
     public static final int T__45=45;
     public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__48=48;
+    public static final int T__49=49;
     public static final int ANWEISUNG=4;
     public static final int BEGIN_TOKEN=5;
     public static final int BLOCK_KOMMENTAR=6;
     public static final int BOOLEAN=7;
     public static final int BOOL_KONSTANTE=8;
     public static final int BUCHSTABE=9;
-    public static final int COMPARE_OP=10;
-    public static final int END_TOKEN=11;
-    public static final int IDENTIFIER=12;
-    public static final int IFTHENELSE=13;
-    public static final int INTEGER=14;
-    public static final int INT_KONSTANTE=15;
-    public static final int LEERZEICHEN=16;
-    public static final int NEUE_ZEILE=17;
-    public static final int PRINT=18;
-    public static final int READ=19;
-    public static final int REAL=20;
-    public static final int REAL_KONSTANTE=21;
-    public static final int START_TOKEN=22;
-    public static final int STRING=23;
-    public static final int STRING_KONSTANTE=24;
-    public static final int VAR=25;
-    public static final int WERTZUWEISUNG=26;
-    public static final int WHILE=27;
-    public static final int ZAHL=28;
+    public static final int COMPARE=10;
+    public static final int COMPARE_OP=11;
+    public static final int ELSE=12;
+    public static final int END_TOKEN=13;
+    public static final int IDENTIFIER=14;
+    public static final int IF=15;
+    public static final int INTEGER=16;
+    public static final int INT_KONSTANTE=17;
+    public static final int LEERZEICHEN=18;
+    public static final int NEUE_ZEILE=19;
+    public static final int PRINT=20;
+    public static final int PROGRAM=21;
+    public static final int READ=22;
+    public static final int REAL=23;
+    public static final int REAL_KONSTANTE=24;
+    public static final int START_TOKEN=25;
+    public static final int STRING=26;
+    public static final int STRING_KONSTANTE=27;
+    public static final int VARDEF=28;
+    public static final int WERTZUWEISUNG=29;
+    public static final int WHILE=30;
+    public static final int ZAHL=31;
 
     // delegates
     // delegators
@@ -65,80 +68,17 @@ public class AST_MiniPLexer extends Lexer {
     public AST_MiniPLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g"; }
-
-    // $ANTLR start "T__29"
-    public final void mT__29() throws RecognitionException {
-        try {
-            int _type = T__29;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:2:7: ( '(' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:2:9: '('
-            {
-            match('('); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__29"
-
-    // $ANTLR start "T__30"
-    public final void mT__30() throws RecognitionException {
-        try {
-            int _type = T__30;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:3:7: ( ')' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:3:9: ')'
-            {
-            match(')'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__30"
-
-    // $ANTLR start "T__31"
-    public final void mT__31() throws RecognitionException {
-        try {
-            int _type = T__31;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:4:7: ( '*' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:4:9: '*'
-            {
-            match('*'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__31"
+    public String getGrammarFileName() { return "Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g"; }
 
     // $ANTLR start "T__32"
     public final void mT__32() throws RecognitionException {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:5:7: ( '+' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:5:9: '+'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:2:7: ( '(' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:2:9: '('
             {
-            match('+'); 
+            match('('); 
 
             }
 
@@ -156,10 +96,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:6:7: ( ',' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:6:9: ','
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:3:7: ( ')' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:3:9: ')'
             {
-            match(','); 
+            match(')'); 
 
             }
 
@@ -177,10 +117,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:7:7: ( '-' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:7:9: '-'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:4:7: ( '*' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:4:9: '*'
             {
-            match('-'); 
+            match('*'); 
 
             }
 
@@ -198,10 +138,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:8:7: ( '/' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:8:9: '/'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:5:7: ( '+' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:5:9: '+'
             {
-            match('/'); 
+            match('+'); 
 
             }
 
@@ -219,12 +159,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:9:7: ( ':=' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:9:9: ':='
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:6:7: ( ',' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:6:9: ','
             {
-            match(":="); 
-
-
+            match(','); 
 
             }
 
@@ -242,10 +180,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:10:7: ( ';' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:10:9: ';'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:7:7: ( '-' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:7:9: '-'
             {
-            match(';'); 
+            match('-'); 
 
             }
 
@@ -263,12 +201,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:11:7: ( 'do' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:11:9: 'do'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:8:7: ( '/' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:8:9: '/'
             {
-            match("do"); 
-
-
+            match('/'); 
 
             }
 
@@ -286,10 +222,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:12:7: ( 'else' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:12:9: 'else'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:9:7: ( ':=' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:9:9: ':='
             {
-            match("else"); 
+            match(":="); 
 
 
 
@@ -309,12 +245,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:13:7: ( 'fi' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:13:9: 'fi'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:10:7: ( ';' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:10:9: ';'
             {
-            match("fi"); 
-
-
+            match(';'); 
 
             }
 
@@ -332,10 +266,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:14:7: ( 'if' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:14:9: 'if'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:11:7: ( 'do' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:11:9: 'do'
             {
-            match("if"); 
+            match("do"); 
 
 
 
@@ -355,10 +289,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:15:7: ( 'od' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:15:9: 'od'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:12:7: ( 'else' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:12:9: 'else'
             {
-            match("od"); 
+            match("else"); 
 
 
 
@@ -378,10 +312,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:16:7: ( 'println(' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:16:9: 'println('
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:13:7: ( 'fi' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:13:9: 'fi'
             {
-            match("println("); 
+            match("fi"); 
 
 
 
@@ -401,10 +335,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:17:7: ( 'read(' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:17:9: 'read('
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:14:7: ( 'if' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:14:9: 'if'
             {
-            match("read("); 
+            match("if"); 
 
 
 
@@ -424,10 +358,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:18:7: ( 'then' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:18:9: 'then'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:15:7: ( 'od' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:15:9: 'od'
             {
-            match("then"); 
+            match("od"); 
 
 
 
@@ -447,10 +381,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:19:7: ( 'while' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:19:9: 'while'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:16:7: ( 'println(' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:16:9: 'println('
             {
-            match("while"); 
+            match("println("); 
 
 
 
@@ -465,13 +399,82 @@ public class AST_MiniPLexer extends Lexer {
     }
     // $ANTLR end "T__46"
 
+    // $ANTLR start "T__47"
+    public final void mT__47() throws RecognitionException {
+        try {
+            int _type = T__47;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:17:7: ( 'read(' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:17:9: 'read('
+            {
+            match("read("); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__47"
+
+    // $ANTLR start "T__48"
+    public final void mT__48() throws RecognitionException {
+        try {
+            int _type = T__48;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:18:7: ( 'then' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:18:9: 'then'
+            {
+            match("then"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__48"
+
+    // $ANTLR start "T__49"
+    public final void mT__49() throws RecognitionException {
+        try {
+            int _type = T__49;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:19:7: ( 'while' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:19:9: 'while'
+            {
+            match("while"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__49"
+
     // $ANTLR start "START_TOKEN"
     public final void mSTART_TOKEN() throws RecognitionException {
         try {
             int _type = START_TOKEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:72:2: ( 'program' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:72:4: 'program'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:72:2: ( 'program' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:72:4: 'program'
             {
             match("program"); 
 
@@ -493,8 +496,8 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = BEGIN_TOKEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:74:2: ( 'begin' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:74:4: 'begin'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:74:2: ( 'begin' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:74:4: 'begin'
             {
             match("begin"); 
 
@@ -516,8 +519,8 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = END_TOKEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:76:2: ( 'end' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:76:4: 'end'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:76:2: ( 'end' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:76:4: 'end'
             {
             match("end"); 
 
@@ -539,8 +542,8 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = INT_KONSTANTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:80:2: ( 'integer' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:80:4: 'integer'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:80:2: ( 'integer' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:80:4: 'integer'
             {
             match("integer"); 
 
@@ -562,8 +565,8 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = REAL_KONSTANTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:82:2: ( 'real' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:82:4: 'real'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:82:2: ( 'real' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:82:4: 'real'
             {
             match("real"); 
 
@@ -585,8 +588,8 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = STRING_KONSTANTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:84:2: ( 'string' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:84:4: 'string'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:84:2: ( 'string' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:84:4: 'string'
             {
             match("string"); 
 
@@ -608,8 +611,8 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = BOOL_KONSTANTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:86:2: ( 'boolean' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:86:4: 'boolean'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:86:2: ( 'boolean' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:86:4: 'boolean'
             {
             match("boolean"); 
 
@@ -631,7 +634,7 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:89:2: ( 'true' | 'false' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:89:2: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -650,7 +653,7 @@ public class AST_MiniPLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:89:5: 'true'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:89:5: 'true'
                     {
                     match("true"); 
 
@@ -659,7 +662,7 @@ public class AST_MiniPLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:89:14: 'false'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:89:14: 'false'
                     {
                     match("false"); 
 
@@ -683,10 +686,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = COMPARE_OP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:92:2: ( ( '=' | '<' | '>' | '<>' | '<= ' | '>=' ) )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:92:5: ( '=' | '<' | '>' | '<>' | '<= ' | '>=' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:92:2: ( ( '=' | '<' | '>' | '<>' | '<= ' | '>=' ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:92:5: ( '=' | '<' | '>' | '<>' | '<= ' | '>=' )
             {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:92:5: ( '=' | '<' | '>' | '<>' | '<= ' | '>=' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:92:5: ( '=' | '<' | '>' | '<>' | '<= ' | '>=' )
             int alt2=6;
             switch ( input.LA(1) ) {
             case '=':
@@ -735,28 +738,28 @@ public class AST_MiniPLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:92:6: '='
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:92:6: '='
                     {
                     match('='); 
 
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:92:12: '<'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:92:12: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:92:18: '>'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:92:18: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:92:24: '<>'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:92:24: '<>'
                     {
                     match("<>"); 
 
@@ -765,7 +768,7 @@ public class AST_MiniPLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:92:31: '<= '
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:92:31: '<= '
                     {
                     match("<= "); 
 
@@ -774,7 +777,7 @@ public class AST_MiniPLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:92:38: '>='
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:92:38: '>='
                     {
                     match(">="); 
 
@@ -802,13 +805,13 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = IDENTIFIER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:95:2: ( BUCHSTABE ( BUCHSTABE | ZAHL | '_' )* )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:95:4: BUCHSTABE ( BUCHSTABE | ZAHL | '_' )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:95:2: ( BUCHSTABE ( BUCHSTABE | ZAHL | '_' )* )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:95:4: BUCHSTABE ( BUCHSTABE | ZAHL | '_' )*
             {
             mBUCHSTABE(); 
 
 
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:95:14: ( BUCHSTABE | ZAHL | '_' )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:95:14: ( BUCHSTABE | ZAHL | '_' )*
             loop3:
             do {
                 int alt3=2;
@@ -821,7 +824,7 @@ public class AST_MiniPLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -858,10 +861,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:98:2: ( ( ZAHL )+ )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:98:4: ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:98:2: ( ( ZAHL )+ )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:98:4: ( ZAHL )+
             {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:98:4: ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:98:4: ( ZAHL )+
             int cnt4=0;
             loop4:
             do {
@@ -875,7 +878,7 @@ public class AST_MiniPLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -916,10 +919,10 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = REAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:100:2: ( ( ZAHL )+ '.' ( ZAHL )+ )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:100:4: ( ZAHL )+ '.' ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:100:2: ( ( ZAHL )+ '.' ( ZAHL )+ )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:100:4: ( ZAHL )+ '.' ( ZAHL )+
             {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:100:4: ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:100:4: ( ZAHL )+
             int cnt5=0;
             loop5:
             do {
@@ -933,7 +936,7 @@ public class AST_MiniPLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -960,7 +963,7 @@ public class AST_MiniPLexer extends Lexer {
 
             match('.'); 
 
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:100:12: ( ZAHL )+
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:100:12: ( ZAHL )+
             int cnt6=0;
             loop6:
             do {
@@ -974,7 +977,7 @@ public class AST_MiniPLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1015,12 +1018,12 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:102:2: ( '\\'' ( BUCHSTABE | ZAHL | ' ' )* '\\'' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:102:3: '\\'' ( BUCHSTABE | ZAHL | ' ' )* '\\''
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:102:2: ( '\\'' ( BUCHSTABE | ZAHL | ' ' )* '\\'' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:102:3: '\\'' ( BUCHSTABE | ZAHL | ' ' )* '\\''
             {
             match('\''); 
 
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:102:8: ( BUCHSTABE | ZAHL | ' ' )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:102:8: ( BUCHSTABE | ZAHL | ' ' )*
             loop7:
             do {
                 int alt7=2;
@@ -1033,7 +1036,7 @@ public class AST_MiniPLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:
             	    {
             	    if ( input.LA(1)==' '||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -1070,8 +1073,8 @@ public class AST_MiniPLexer extends Lexer {
     // $ANTLR start "ZAHL"
     public final void mZAHL() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:105:2: ( ( '0' .. '9' ) )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:105:2: ( ( '0' .. '9' ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                 input.consume();
@@ -1096,8 +1099,8 @@ public class AST_MiniPLexer extends Lexer {
     // $ANTLR start "BUCHSTABE"
     public final void mBUCHSTABE() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:107:2: ( 'a' .. 'z' | 'A' .. 'Z' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:107:2: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1124,14 +1127,14 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = BLOCK_KOMMENTAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:110:2: ( '/*' ( . )* '*/' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:110:4: '/*' ( . )* '*/'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:110:2: ( '/*' ( . )* '*/' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:110:4: '/*' ( . )* '*/'
             {
             match("/*"); 
 
 
 
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:110:9: ( . )*
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:110:9: ( . )*
             loop8:
             do {
                 int alt8=2;
@@ -1156,7 +1159,7 @@ public class AST_MiniPLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:110:9: .
+            	    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:110:9: .
             	    {
             	    matchAny(); 
 
@@ -1191,8 +1194,8 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = LEERZEICHEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:112:2: ( ( ' ' | '\\t' ) )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:112:4: ( ' ' | '\\t' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:112:2: ( ( ' ' | '\\t' ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:112:4: ( ' ' | '\\t' )
             {
             if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1222,13 +1225,13 @@ public class AST_MiniPLexer extends Lexer {
         try {
             int _type = NEUE_ZEILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:114:2: ( ( ( '\\r' )? '\\n' ) )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:114:4: ( ( '\\r' )? '\\n' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:114:2: ( ( ( '\\r' )? '\\n' ) )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:114:4: ( ( '\\r' )? '\\n' )
             {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:114:4: ( ( '\\r' )? '\\n' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:114:5: ( '\\r' )? '\\n'
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:114:4: ( ( '\\r' )? '\\n' )
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:114:5: ( '\\r' )? '\\n'
             {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:114:5: ( '\\r' )?
+            // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:114:5: ( '\\r' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1237,7 +1240,7 @@ public class AST_MiniPLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:114:5: '\\r'
+                    // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:114:5: '\\r'
                     {
                     match('\r'); 
 
@@ -1266,156 +1269,156 @@ public class AST_MiniPLexer extends Lexer {
     // $ANTLR end "NEUE_ZEILE"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:8: ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | START_TOKEN | BEGIN_TOKEN | END_TOKEN | INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE | BOOLEAN | COMPARE_OP | IDENTIFIER | INTEGER | REAL | STRING | BLOCK_KOMMENTAR | LEERZEICHEN | NEUE_ZEILE )
+        // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:8: ( T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | START_TOKEN | BEGIN_TOKEN | END_TOKEN | INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE | BOOLEAN | COMPARE_OP | IDENTIFIER | INTEGER | REAL | STRING | BLOCK_KOMMENTAR | LEERZEICHEN | NEUE_ZEILE )
         int alt10=34;
         alt10 = dfa10.predict(input);
         switch (alt10) {
             case 1 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:10: T__29
-                {
-                mT__29(); 
-
-
-                }
-                break;
-            case 2 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:16: T__30
-                {
-                mT__30(); 
-
-
-                }
-                break;
-            case 3 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:22: T__31
-                {
-                mT__31(); 
-
-
-                }
-                break;
-            case 4 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:28: T__32
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:10: T__32
                 {
                 mT__32(); 
 
 
                 }
                 break;
-            case 5 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:34: T__33
+            case 2 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:16: T__33
                 {
                 mT__33(); 
 
 
                 }
                 break;
-            case 6 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:40: T__34
+            case 3 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:22: T__34
                 {
                 mT__34(); 
 
 
                 }
                 break;
-            case 7 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:46: T__35
+            case 4 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:28: T__35
                 {
                 mT__35(); 
 
 
                 }
                 break;
-            case 8 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:52: T__36
+            case 5 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:34: T__36
                 {
                 mT__36(); 
 
 
                 }
                 break;
-            case 9 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:58: T__37
+            case 6 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:40: T__37
                 {
                 mT__37(); 
 
 
                 }
                 break;
-            case 10 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:64: T__38
+            case 7 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:46: T__38
                 {
                 mT__38(); 
 
 
                 }
                 break;
-            case 11 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:70: T__39
+            case 8 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:52: T__39
                 {
                 mT__39(); 
 
 
                 }
                 break;
-            case 12 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:76: T__40
+            case 9 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:58: T__40
                 {
                 mT__40(); 
 
 
                 }
                 break;
-            case 13 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:82: T__41
+            case 10 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:64: T__41
                 {
                 mT__41(); 
 
 
                 }
                 break;
-            case 14 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:88: T__42
+            case 11 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:70: T__42
                 {
                 mT__42(); 
 
 
                 }
                 break;
-            case 15 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:94: T__43
+            case 12 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:76: T__43
                 {
                 mT__43(); 
 
 
                 }
                 break;
-            case 16 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:100: T__44
+            case 13 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:82: T__44
                 {
                 mT__44(); 
 
 
                 }
                 break;
-            case 17 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:106: T__45
+            case 14 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:88: T__45
                 {
                 mT__45(); 
 
 
                 }
                 break;
-            case 18 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:112: T__46
+            case 15 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:94: T__46
                 {
                 mT__46(); 
 
 
                 }
                 break;
+            case 16 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:100: T__47
+                {
+                mT__47(); 
+
+
+                }
+                break;
+            case 17 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:106: T__48
+                {
+                mT__48(); 
+
+
+                }
+                break;
+            case 18 :
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:112: T__49
+                {
+                mT__49(); 
+
+
+                }
+                break;
             case 19 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:118: START_TOKEN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:118: START_TOKEN
                 {
                 mSTART_TOKEN(); 
 
@@ -1423,7 +1426,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:130: BEGIN_TOKEN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:130: BEGIN_TOKEN
                 {
                 mBEGIN_TOKEN(); 
 
@@ -1431,7 +1434,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:142: END_TOKEN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:142: END_TOKEN
                 {
                 mEND_TOKEN(); 
 
@@ -1439,7 +1442,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:152: INT_KONSTANTE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:152: INT_KONSTANTE
                 {
                 mINT_KONSTANTE(); 
 
@@ -1447,7 +1450,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:166: REAL_KONSTANTE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:166: REAL_KONSTANTE
                 {
                 mREAL_KONSTANTE(); 
 
@@ -1455,7 +1458,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:181: STRING_KONSTANTE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:181: STRING_KONSTANTE
                 {
                 mSTRING_KONSTANTE(); 
 
@@ -1463,7 +1466,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:198: BOOL_KONSTANTE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:198: BOOL_KONSTANTE
                 {
                 mBOOL_KONSTANTE(); 
 
@@ -1471,7 +1474,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:213: BOOLEAN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:213: BOOLEAN
                 {
                 mBOOLEAN(); 
 
@@ -1479,7 +1482,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:221: COMPARE_OP
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:221: COMPARE_OP
                 {
                 mCOMPARE_OP(); 
 
@@ -1487,7 +1490,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:232: IDENTIFIER
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:232: IDENTIFIER
                 {
                 mIDENTIFIER(); 
 
@@ -1495,7 +1498,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:243: INTEGER
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:243: INTEGER
                 {
                 mINTEGER(); 
 
@@ -1503,7 +1506,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:251: REAL
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:251: REAL
                 {
                 mREAL(); 
 
@@ -1511,7 +1514,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:256: STRING
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:256: STRING
                 {
                 mSTRING(); 
 
@@ -1519,7 +1522,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:263: BLOCK_KOMMENTAR
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:263: BLOCK_KOMMENTAR
                 {
                 mBLOCK_KOMMENTAR(); 
 
@@ -1527,7 +1530,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:279: LEERZEICHEN
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:279: LEERZEICHEN
                 {
                 mLEERZEICHEN(); 
 
@@ -1535,7 +1538,7 @@ public class AST_MiniPLexer extends Lexer {
                 }
                 break;
             case 34 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 2\\AST_MiniP.g:1:291: NEUE_ZEILE
+                // Z:\\pub\\Semester 4\\CIP-Git\\CIP\\Aufgabe 2\\Sebastian\\Aufgabe 2\\AST_MiniP.g:1:291: NEUE_ZEILE
                 {
                 mNEUE_ZEILE(); 
 
@@ -1726,7 +1729,7 @@ public class AST_MiniPLexer extends Lexer {
             this.transition = DFA10_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | START_TOKEN | BEGIN_TOKEN | END_TOKEN | INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE | BOOLEAN | COMPARE_OP | IDENTIFIER | INTEGER | REAL | STRING | BLOCK_KOMMENTAR | LEERZEICHEN | NEUE_ZEILE );";
+            return "1:1: Tokens : ( T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | START_TOKEN | BEGIN_TOKEN | END_TOKEN | INT_KONSTANTE | REAL_KONSTANTE | STRING_KONSTANTE | BOOL_KONSTANTE | BOOLEAN | COMPARE_OP | IDENTIFIER | INTEGER | REAL | STRING | BLOCK_KOMMENTAR | LEERZEICHEN | NEUE_ZEILE );";
         }
     }
  

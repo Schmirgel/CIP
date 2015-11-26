@@ -35,10 +35,10 @@ mult
 	: atom (('*' | '/')^ atom)*	; 
 	
 atom	
-	: ('+'^ | '-'^)? INTEGER
-	| ('+'^ | '-'^)? REAL
+	: ('+' | '-')? INTEGER
+	| ('+' | '-')? REAL
 	| IDENTIFIER
-	| '(' arith_ausdruck ')'	;
+	| '('! arith_ausdruck ')'!	;
 
 fi 
 	: 'if' vergleich  'then' ifanweisung+ ('else' elseanweisung+)? 'fi' -> ^('if' vergleich ^(THEN ifanweisung+) ^(ELSE elseanweisung+)?);
