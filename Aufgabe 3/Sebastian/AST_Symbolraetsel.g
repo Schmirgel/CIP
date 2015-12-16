@@ -1,18 +1,20 @@
-grammar AST_SymbolRaetsel.g;
+grammar AST_SymbolRaetsel;
 
+//AST-Ereugen
 options{
+	language = Java;
 	output=AST;
-	ASTLabelType=CommonTree;
 }
 tokens{WORD;}
+
 /*
  *	erstellt einen AST für SymbolRaetsel
  */
-prog	:	id11=word op12=OP id13=word eq14=EQ id15=word
-		op21=OP 	op22=OP 	op23=OP
-		id31=word op32=OP id33=word eq34=EQ id35=word
+prog	:	id11=word op12=op id13=word eq14=EQ id15=word
+		op21=op 	op22=op 	op23=op
+		id31=word op32=op id33=word eq34=EQ id35=word
 		eq41=EQ 	eq42=EQ 	eq43=EQ
-		id51=word op52=OP id53=word eq54=EQ id55=word
+		id51=word op52=op id53=word eq54=EQ id55=word
 		
 		->
 		//waagerechte Aufgaben
@@ -33,7 +35,12 @@ BUCHSTABEN
 
 EQ	:	'=';
 
-OP	:	('+'|'-');
+op	:	PLUS 
+	| 	MINUS;
+
+PLUS	:	'+';
+
+MINUS	:	'-';
 
 fragment A	:	'A';
 fragment B	:	'B';
@@ -68,4 +75,3 @@ WS  :   ( ' '
         | '\n'
         ) {$channel=HIDDEN;}
     ;
-
