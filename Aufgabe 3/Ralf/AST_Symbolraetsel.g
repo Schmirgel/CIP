@@ -1,4 +1,4 @@
-grammar AST_SymbolRaetsel.g;
+grammar AST_Symbolraetsel;
 
 options{
 	output=AST;
@@ -6,14 +6,14 @@ options{
 }
 tokens{WORD;}
 /*
- *	erstellt einen AST für SymbolRaetsel
+ *	erstellt einen AST fuer SymbolRaetsel
  */
 prog	:	id11=word op12=OP id13=word eq14=EQ id15=word
 		op21=OP 	op22=OP 	op23=OP
 		id31=word op32=OP id33=word eq34=EQ id35=word
 		eq41=EQ 	eq42=EQ 	eq43=EQ
 		id51=word op52=OP id53=word eq54=EQ id55=word
-		
+
 		->
 		//waagerechte Aufgaben
 		^($eq14 ^($op12 $id11 $id13) $id15) // Zeile 1
@@ -28,7 +28,7 @@ prog	:	id11=word op12=OP id13=word eq14=EQ id15=word
 word  :	BUCHSTABEN+ -> ^(WORD BUCHSTABEN+);
 
 BUCHSTABEN 
-	:	(A|B|C|D|E|F|G|H|I|J|K|L|N|M|O|P|Q|R|T|U|S|V|W|X|Y|Z);
+	:	(A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z);
 
 
 EQ	:	'=';
@@ -62,10 +62,9 @@ fragment X	:	'X';
 fragment Y	:	'Y';
 fragment Z	:	'Z';
 
-WS  :   ( ' '
-        | '\t'
+WS  :   ( ' ' 
+	|'\t'
         | '\r'
         | '\n'
         ) {$channel=HIDDEN;}
     ;
-
