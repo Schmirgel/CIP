@@ -1,4 +1,4 @@
-grammar AST_SymbolRaetsel.g;
+grammar AST_Symbolraetsel.g;
 
 options{
 	output=AST;
