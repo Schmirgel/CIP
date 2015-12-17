@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g 2015-12-16 16:01:38
+// $ANTLR 3.4 Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g 2015-12-17 13:12:03
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -9,7 +9,7 @@ import org.antlr.runtime.tree.*;
 
 
 @SuppressWarnings({"all", "warnings", "unchecked"})
-public class AST_SymbolRaetselParser extends Parser {
+public class AST_SymbolraetselParser extends Parser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "A", "B", "BUCHSTABEN", "C", "D", "E", "EQ", "F", "G", "H", "I", "J", "K", "L", "M", "MINUS", "N", "O", "P", "PLUS", "Q", "R", "S", "T", "U", "V", "W", "WORD", "WS", "X", "Y", "Z"
     };
@@ -56,10 +56,10 @@ public class AST_SymbolRaetselParser extends Parser {
     // delegators
 
 
-    public AST_SymbolRaetselParser(TokenStream input) {
+    public AST_SymbolraetselParser(TokenStream input) {
         this(input, new RecognizerSharedState());
     }
-    public AST_SymbolRaetselParser(TokenStream input, RecognizerSharedState state) {
+    public AST_SymbolraetselParser(TokenStream input, RecognizerSharedState state) {
         super(input, state);
     }
 
@@ -71,8 +71,8 @@ public void setTreeAdaptor(TreeAdaptor adaptor) {
 public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
-    public String[] getTokenNames() { return AST_SymbolRaetselParser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g"; }
+    public String[] getTokenNames() { return AST_SymbolraetselParser.tokenNames; }
+    public String getGrammarFileName() { return "Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g"; }
 
 
     public static class prog_return extends ParserRuleReturnScope {
@@ -82,9 +82,9 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "prog"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:13:1: prog : id11= word op12= op id13= word eq14= EQ id15= word op21= op op22= op op23= op id31= word op32= op id33= word eq34= EQ id35= word eq41= EQ eq42= EQ eq43= EQ id51= word op52= op id53= word eq54= EQ id55= word -> ^( $eq14 ^( $op12 $id11 $id13) $id15) ^( $eq34 ^( $op32 $id31 $id33) $id35) ^( $eq54 ^( $op52 $id51 $id53) $id55) ^( $eq41 ^( $op21 $id11 $id31) $id51) ^( $eq42 ^( $op22 $id13 $id33) $id53) ^( $eq43 ^( $op23 $id15 $id35) $id55) ;
-    public final AST_SymbolRaetselParser.prog_return prog() throws RecognitionException {
-        AST_SymbolRaetselParser.prog_return retval = new AST_SymbolRaetselParser.prog_return();
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:13:1: prog : id11= word op12= op id13= word eq14= EQ id15= word op21= op op22= op op23= op id31= word op32= op id33= word eq34= EQ id35= word eq41= EQ eq42= EQ eq43= EQ id51= word op52= op id53= word eq54= EQ id55= word -> ^( $eq14 ^( $op12 $id11 $id13) $id15) ^( $eq34 ^( $op32 $id31 $id33) $id35) ^( $eq54 ^( $op52 $id51 $id53) $id55) ^( $eq41 ^( $op21 $id11 $id31) $id51) ^( $eq42 ^( $op22 $id13 $id33) $id53) ^( $eq43 ^( $op23 $id15 $id35) $id55) ;
+    public final AST_SymbolraetselParser.prog_return prog() throws RecognitionException {
+        AST_SymbolraetselParser.prog_return retval = new AST_SymbolraetselParser.prog_return();
         retval.start = input.LT(1);
 
 
@@ -96,35 +96,35 @@ public TreeAdaptor getTreeAdaptor() {
         Token eq42=null;
         Token eq43=null;
         Token eq54=null;
-        AST_SymbolRaetselParser.word_return id11 =null;
+        AST_SymbolraetselParser.word_return id11 =null;
 
-        AST_SymbolRaetselParser.op_return op12 =null;
+        AST_SymbolraetselParser.op_return op12 =null;
 
-        AST_SymbolRaetselParser.word_return id13 =null;
+        AST_SymbolraetselParser.word_return id13 =null;
 
-        AST_SymbolRaetselParser.word_return id15 =null;
+        AST_SymbolraetselParser.word_return id15 =null;
 
-        AST_SymbolRaetselParser.op_return op21 =null;
+        AST_SymbolraetselParser.op_return op21 =null;
 
-        AST_SymbolRaetselParser.op_return op22 =null;
+        AST_SymbolraetselParser.op_return op22 =null;
 
-        AST_SymbolRaetselParser.op_return op23 =null;
+        AST_SymbolraetselParser.op_return op23 =null;
 
-        AST_SymbolRaetselParser.word_return id31 =null;
+        AST_SymbolraetselParser.word_return id31 =null;
 
-        AST_SymbolRaetselParser.op_return op32 =null;
+        AST_SymbolraetselParser.op_return op32 =null;
 
-        AST_SymbolRaetselParser.word_return id33 =null;
+        AST_SymbolraetselParser.word_return id33 =null;
 
-        AST_SymbolRaetselParser.word_return id35 =null;
+        AST_SymbolraetselParser.word_return id35 =null;
 
-        AST_SymbolRaetselParser.word_return id51 =null;
+        AST_SymbolraetselParser.word_return id51 =null;
 
-        AST_SymbolRaetselParser.op_return op52 =null;
+        AST_SymbolraetselParser.op_return op52 =null;
 
-        AST_SymbolRaetselParser.word_return id53 =null;
+        AST_SymbolraetselParser.word_return id53 =null;
 
-        AST_SymbolRaetselParser.word_return id55 =null;
+        AST_SymbolraetselParser.word_return id55 =null;
 
 
         Object eq14_tree=null;
@@ -137,8 +137,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_op=new RewriteRuleSubtreeStream(adaptor,"rule op");
         RewriteRuleSubtreeStream stream_word=new RewriteRuleSubtreeStream(adaptor,"rule word");
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:13:6: (id11= word op12= op id13= word eq14= EQ id15= word op21= op op22= op op23= op id31= word op32= op id33= word eq34= EQ id35= word eq41= EQ eq42= EQ eq43= EQ id51= word op52= op id53= word eq54= EQ id55= word -> ^( $eq14 ^( $op12 $id11 $id13) $id15) ^( $eq34 ^( $op32 $id31 $id33) $id35) ^( $eq54 ^( $op52 $id51 $id53) $id55) ^( $eq41 ^( $op21 $id11 $id31) $id51) ^( $eq42 ^( $op22 $id13 $id33) $id53) ^( $eq43 ^( $op23 $id15 $id35) $id55) )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:13:8: id11= word op12= op id13= word eq14= EQ id15= word op21= op op22= op op23= op id31= word op32= op id33= word eq34= EQ id35= word eq41= EQ eq42= EQ eq43= EQ id51= word op52= op id53= word eq54= EQ id55= word
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:13:6: (id11= word op12= op id13= word eq14= EQ id15= word op21= op op22= op op23= op id31= word op32= op id33= word eq34= EQ id35= word eq41= EQ eq42= EQ eq43= EQ id51= word op52= op id53= word eq54= EQ id55= word -> ^( $eq14 ^( $op12 $id11 $id13) $id15) ^( $eq34 ^( $op32 $id31 $id33) $id35) ^( $eq54 ^( $op52 $id51 $id53) $id55) ^( $eq41 ^( $op21 $id11 $id31) $id51) ^( $eq42 ^( $op22 $id13 $id33) $id53) ^( $eq43 ^( $op23 $id15 $id35) $id55) )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:13:8: id11= word op12= op id13= word eq14= EQ id15= word op21= op op22= op op23= op id31= word op32= op id33= word eq34= EQ id35= word eq41= EQ eq42= EQ eq43= EQ id51= word op52= op id53= word eq54= EQ id55= word
             {
             pushFollow(FOLLOW_word_in_prog39);
             id11=word();
@@ -270,45 +270,45 @@ public TreeAdaptor getTreeAdaptor() {
             stream_word.add(id55.getTree());
 
             // AST REWRITE
-            // elements: id31, id51, op21, id13, op52, id53, id33, id35, op23, id31, op12, id11, op32, eq14, eq41, id55, id51, id13, eq34, eq43, id53, id35, id11, eq42, id15, id15, op22, id33, id55, eq54
-            // token labels: eq14, eq34, eq43, eq54, eq42, eq41
-            // rule labels: id51, id31, id53, op52, id33, id11, id55, id13, id35, id15, retval, op21, op32, op22, op23, op12
+            // elements: id15, op32, id13, eq34, id31, eq54, id31, id13, id15, eq41, id51, id55, id33, id11, id11, id35, id53, eq14, op52, op22, op12, id35, id55, eq42, id51, op23, eq43, op21, id53, id33
+            // token labels: eq14, eq34, eq54, eq43, eq42, eq41
+            // rule labels: id51, id31, id53, id55, id33, id11, op52, id13, id35, id15, retval, op32, op21, op22, op12, op23
             // token list labels: 
             // rule list labels: 
             // wildcard labels: 
             retval.tree = root_0;
             RewriteRuleTokenStream stream_eq14=new RewriteRuleTokenStream(adaptor,"token eq14",eq14);
             RewriteRuleTokenStream stream_eq34=new RewriteRuleTokenStream(adaptor,"token eq34",eq34);
-            RewriteRuleTokenStream stream_eq43=new RewriteRuleTokenStream(adaptor,"token eq43",eq43);
             RewriteRuleTokenStream stream_eq54=new RewriteRuleTokenStream(adaptor,"token eq54",eq54);
+            RewriteRuleTokenStream stream_eq43=new RewriteRuleTokenStream(adaptor,"token eq43",eq43);
             RewriteRuleTokenStream stream_eq42=new RewriteRuleTokenStream(adaptor,"token eq42",eq42);
             RewriteRuleTokenStream stream_eq41=new RewriteRuleTokenStream(adaptor,"token eq41",eq41);
             RewriteRuleSubtreeStream stream_id51=new RewriteRuleSubtreeStream(adaptor,"rule id51",id51!=null?id51.tree:null);
             RewriteRuleSubtreeStream stream_id31=new RewriteRuleSubtreeStream(adaptor,"rule id31",id31!=null?id31.tree:null);
             RewriteRuleSubtreeStream stream_id53=new RewriteRuleSubtreeStream(adaptor,"rule id53",id53!=null?id53.tree:null);
-            RewriteRuleSubtreeStream stream_op52=new RewriteRuleSubtreeStream(adaptor,"rule op52",op52!=null?op52.tree:null);
+            RewriteRuleSubtreeStream stream_id55=new RewriteRuleSubtreeStream(adaptor,"rule id55",id55!=null?id55.tree:null);
             RewriteRuleSubtreeStream stream_id33=new RewriteRuleSubtreeStream(adaptor,"rule id33",id33!=null?id33.tree:null);
             RewriteRuleSubtreeStream stream_id11=new RewriteRuleSubtreeStream(adaptor,"rule id11",id11!=null?id11.tree:null);
-            RewriteRuleSubtreeStream stream_id55=new RewriteRuleSubtreeStream(adaptor,"rule id55",id55!=null?id55.tree:null);
+            RewriteRuleSubtreeStream stream_op52=new RewriteRuleSubtreeStream(adaptor,"rule op52",op52!=null?op52.tree:null);
             RewriteRuleSubtreeStream stream_id13=new RewriteRuleSubtreeStream(adaptor,"rule id13",id13!=null?id13.tree:null);
             RewriteRuleSubtreeStream stream_id35=new RewriteRuleSubtreeStream(adaptor,"rule id35",id35!=null?id35.tree:null);
             RewriteRuleSubtreeStream stream_id15=new RewriteRuleSubtreeStream(adaptor,"rule id15",id15!=null?id15.tree:null);
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
-            RewriteRuleSubtreeStream stream_op21=new RewriteRuleSubtreeStream(adaptor,"rule op21",op21!=null?op21.tree:null);
             RewriteRuleSubtreeStream stream_op32=new RewriteRuleSubtreeStream(adaptor,"rule op32",op32!=null?op32.tree:null);
+            RewriteRuleSubtreeStream stream_op21=new RewriteRuleSubtreeStream(adaptor,"rule op21",op21!=null?op21.tree:null);
             RewriteRuleSubtreeStream stream_op22=new RewriteRuleSubtreeStream(adaptor,"rule op22",op22!=null?op22.tree:null);
-            RewriteRuleSubtreeStream stream_op23=new RewriteRuleSubtreeStream(adaptor,"rule op23",op23!=null?op23.tree:null);
             RewriteRuleSubtreeStream stream_op12=new RewriteRuleSubtreeStream(adaptor,"rule op12",op12!=null?op12.tree:null);
+            RewriteRuleSubtreeStream stream_op23=new RewriteRuleSubtreeStream(adaptor,"rule op23",op23!=null?op23.tree:null);
 
             root_0 = (Object)adaptor.nil();
             // 19:3: -> ^( $eq14 ^( $op12 $id11 $id13) $id15) ^( $eq34 ^( $op32 $id31 $id33) $id35) ^( $eq54 ^( $op52 $id51 $id53) $id55) ^( $eq41 ^( $op21 $id11 $id31) $id51) ^( $eq42 ^( $op22 $id13 $id33) $id53) ^( $eq43 ^( $op23 $id15 $id35) $id55)
             {
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:21:3: ^( $eq14 ^( $op12 $id11 $id13) $id15)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:21:3: ^( $eq14 ^( $op12 $id11 $id13) $id15)
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_eq14.nextNode(), root_1);
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:21:11: ^( $op12 $id11 $id13)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:21:11: ^( $op12 $id11 $id13)
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(stream_op12.nextNode(), root_2);
@@ -325,12 +325,12 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_0, root_1);
                 }
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:22:3: ^( $eq34 ^( $op32 $id31 $id33) $id35)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:22:3: ^( $eq34 ^( $op32 $id31 $id33) $id35)
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_eq34.nextNode(), root_1);
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:22:11: ^( $op32 $id31 $id33)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:22:11: ^( $op32 $id31 $id33)
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(stream_op32.nextNode(), root_2);
@@ -347,12 +347,12 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_0, root_1);
                 }
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:23:3: ^( $eq54 ^( $op52 $id51 $id53) $id55)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:23:3: ^( $eq54 ^( $op52 $id51 $id53) $id55)
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_eq54.nextNode(), root_1);
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:23:11: ^( $op52 $id51 $id53)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:23:11: ^( $op52 $id51 $id53)
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(stream_op52.nextNode(), root_2);
@@ -369,12 +369,12 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_0, root_1);
                 }
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:25:3: ^( $eq41 ^( $op21 $id11 $id31) $id51)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:25:3: ^( $eq41 ^( $op21 $id11 $id31) $id51)
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_eq41.nextNode(), root_1);
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:25:11: ^( $op21 $id11 $id31)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:25:11: ^( $op21 $id11 $id31)
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(stream_op21.nextNode(), root_2);
@@ -391,12 +391,12 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_0, root_1);
                 }
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:26:3: ^( $eq42 ^( $op22 $id13 $id33) $id53)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:26:3: ^( $eq42 ^( $op22 $id13 $id33) $id53)
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_eq42.nextNode(), root_1);
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:26:11: ^( $op22 $id13 $id33)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:26:11: ^( $op22 $id13 $id33)
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(stream_op22.nextNode(), root_2);
@@ -413,12 +413,12 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_0, root_1);
                 }
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:27:3: ^( $eq43 ^( $op23 $id15 $id35) $id55)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:27:3: ^( $eq43 ^( $op23 $id15 $id35) $id55)
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_eq43.nextNode(), root_1);
 
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:27:11: ^( $op23 $id15 $id35)
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:27:11: ^( $op23 $id15 $id35)
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(stream_op23.nextNode(), root_2);
@@ -471,9 +471,9 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "word"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:30:1: word : ( BUCHSTABEN )+ -> ^( WORD ( BUCHSTABEN )+ ) ;
-    public final AST_SymbolRaetselParser.word_return word() throws RecognitionException {
-        AST_SymbolRaetselParser.word_return retval = new AST_SymbolRaetselParser.word_return();
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:30:1: word : ( BUCHSTABEN )+ -> ^( WORD ( BUCHSTABEN )+ ) ;
+    public final AST_SymbolraetselParser.word_return word() throws RecognitionException {
+        AST_SymbolraetselParser.word_return retval = new AST_SymbolraetselParser.word_return();
         retval.start = input.LT(1);
 
 
@@ -485,10 +485,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_BUCHSTABEN=new RewriteRuleTokenStream(adaptor,"token BUCHSTABEN");
 
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:30:7: ( ( BUCHSTABEN )+ -> ^( WORD ( BUCHSTABEN )+ ) )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:30:9: ( BUCHSTABEN )+
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:30:7: ( ( BUCHSTABEN )+ -> ^( WORD ( BUCHSTABEN )+ ) )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:30:9: ( BUCHSTABEN )+
             {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:30:9: ( BUCHSTABEN )+
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:30:9: ( BUCHSTABEN )+
             int cnt1=0;
             loop1:
             do {
@@ -502,7 +502,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:30:9: BUCHSTABEN
+            	    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:30:9: BUCHSTABEN
             	    {
             	    BUCHSTABEN1=(Token)match(input,BUCHSTABEN,FOLLOW_BUCHSTABEN_in_word290);  
             	    stream_BUCHSTABEN.add(BUCHSTABEN1);
@@ -534,7 +534,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
             // 30:21: -> ^( WORD ( BUCHSTABEN )+ )
             {
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:30:24: ^( WORD ( BUCHSTABEN )+ )
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:30:24: ^( WORD ( BUCHSTABEN )+ )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -591,9 +591,9 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "op"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:38:1: op : ( PLUS | MINUS );
-    public final AST_SymbolRaetselParser.op_return op() throws RecognitionException {
-        AST_SymbolRaetselParser.op_return retval = new AST_SymbolRaetselParser.op_return();
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:38:1: op : ( PLUS | MINUS );
+    public final AST_SymbolraetselParser.op_return op() throws RecognitionException {
+        AST_SymbolraetselParser.op_return retval = new AST_SymbolraetselParser.op_return();
         retval.start = input.LT(1);
 
 
@@ -604,8 +604,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object set2_tree=null;
 
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:38:4: ( PLUS | MINUS )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:38:4: ( PLUS | MINUS )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:
             {
             root_0 = (Object)adaptor.nil();
 

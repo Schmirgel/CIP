@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g 2015-12-16 16:01:38
+// $ANTLR 3.4 Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g 2015-12-17 13:12:03
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked"})
-public class AST_SymbolRaetselLexer extends Lexer {
+public class AST_SymbolraetselLexer extends Lexer {
     public static final int EOF=-1;
     public static final int A=4;
     public static final int B=5;
@@ -47,22 +47,22 @@ public class AST_SymbolRaetselLexer extends Lexer {
         return new Lexer[] {};
     }
 
-    public AST_SymbolRaetselLexer() {} 
-    public AST_SymbolRaetselLexer(CharStream input) {
+    public AST_SymbolraetselLexer() {} 
+    public AST_SymbolraetselLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
-    public AST_SymbolRaetselLexer(CharStream input, RecognizerSharedState state) {
+    public AST_SymbolraetselLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g"; }
+    public String getGrammarFileName() { return "Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g"; }
 
     // $ANTLR start "BUCHSTABEN"
     public final void mBUCHSTABEN() throws RecognitionException {
         try {
             int _type = BUCHSTABEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:33:2: ( ( A | B | C | D | E | F | G | H | I | J | K | L | N | M | O | P | Q | R | T | U | S | V | W | X | Y | Z ) )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:33:2: ( ( A | B | C | D | E | F | G | H | I | J | K | L | N | M | O | P | Q | R | T | U | S | V | W | X | Y | Z ) )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') ) {
                 input.consume();
@@ -90,8 +90,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
         try {
             int _type = EQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:36:4: ( '=' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:36:6: '='
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:36:4: ( '=' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:36:6: '='
             {
             match('='); 
 
@@ -111,8 +111,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:41:6: ( '+' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:41:8: '+'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:41:6: ( '+' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:41:8: '+'
             {
             match('+'); 
 
@@ -132,8 +132,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:43:7: ( '-' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:43:9: '-'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:43:7: ( '-' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:43:9: '-'
             {
             match('-'); 
 
@@ -151,8 +151,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "A"
     public final void mA() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:45:12: ( 'A' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:45:14: 'A'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:45:12: ( 'A' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:45:14: 'A'
             {
             match('A'); 
 
@@ -169,8 +169,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "B"
     public final void mB() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:46:12: ( 'B' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:46:14: 'B'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:46:12: ( 'B' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:46:14: 'B'
             {
             match('B'); 
 
@@ -187,8 +187,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "C"
     public final void mC() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:47:12: ( 'C' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:47:14: 'C'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:47:12: ( 'C' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:47:14: 'C'
             {
             match('C'); 
 
@@ -205,8 +205,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "D"
     public final void mD() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:48:12: ( 'D' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:48:14: 'D'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:48:12: ( 'D' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:48:14: 'D'
             {
             match('D'); 
 
@@ -223,8 +223,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "E"
     public final void mE() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:49:12: ( 'E' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:49:14: 'E'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:49:12: ( 'E' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:49:14: 'E'
             {
             match('E'); 
 
@@ -241,8 +241,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "F"
     public final void mF() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:50:12: ( 'F' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:50:14: 'F'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:50:12: ( 'F' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:50:14: 'F'
             {
             match('F'); 
 
@@ -259,8 +259,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "G"
     public final void mG() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:51:12: ( 'G' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:51:14: 'G'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:51:12: ( 'G' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:51:14: 'G'
             {
             match('G'); 
 
@@ -277,8 +277,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "H"
     public final void mH() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:52:12: ( 'H' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:52:14: 'H'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:52:12: ( 'H' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:52:14: 'H'
             {
             match('H'); 
 
@@ -295,8 +295,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "I"
     public final void mI() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:53:12: ( 'I' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:53:14: 'I'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:53:12: ( 'I' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:53:14: 'I'
             {
             match('I'); 
 
@@ -313,8 +313,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "J"
     public final void mJ() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:54:12: ( 'J' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:54:14: 'J'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:54:12: ( 'J' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:54:14: 'J'
             {
             match('J'); 
 
@@ -331,8 +331,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "K"
     public final void mK() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:55:12: ( 'K' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:55:14: 'K'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:55:12: ( 'K' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:55:14: 'K'
             {
             match('K'); 
 
@@ -349,8 +349,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "L"
     public final void mL() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:56:12: ( 'L' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:56:14: 'L'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:56:12: ( 'L' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:56:14: 'L'
             {
             match('L'); 
 
@@ -367,8 +367,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "M"
     public final void mM() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:57:12: ( 'M' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:57:14: 'M'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:57:12: ( 'M' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:57:14: 'M'
             {
             match('M'); 
 
@@ -385,8 +385,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "N"
     public final void mN() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:58:12: ( 'N' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:58:14: 'N'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:58:12: ( 'N' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:58:14: 'N'
             {
             match('N'); 
 
@@ -403,8 +403,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "O"
     public final void mO() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:59:12: ( 'O' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:59:14: 'O'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:59:12: ( 'O' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:59:14: 'O'
             {
             match('O'); 
 
@@ -421,8 +421,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "P"
     public final void mP() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:60:12: ( 'P' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:60:14: 'P'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:60:12: ( 'P' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:60:14: 'P'
             {
             match('P'); 
 
@@ -439,8 +439,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "Q"
     public final void mQ() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:61:12: ( 'Q' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:61:14: 'Q'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:61:12: ( 'Q' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:61:14: 'Q'
             {
             match('Q'); 
 
@@ -457,8 +457,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "R"
     public final void mR() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:62:12: ( 'R' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:62:14: 'R'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:62:12: ( 'R' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:62:14: 'R'
             {
             match('R'); 
 
@@ -475,8 +475,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "S"
     public final void mS() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:63:12: ( 'S' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:63:14: 'S'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:63:12: ( 'S' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:63:14: 'S'
             {
             match('S'); 
 
@@ -493,8 +493,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "T"
     public final void mT() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:64:12: ( 'T' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:64:14: 'T'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:64:12: ( 'T' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:64:14: 'T'
             {
             match('T'); 
 
@@ -511,8 +511,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "U"
     public final void mU() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:65:12: ( 'U' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:65:14: 'U'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:65:12: ( 'U' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:65:14: 'U'
             {
             match('U'); 
 
@@ -529,8 +529,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "V"
     public final void mV() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:66:12: ( 'V' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:66:14: 'V'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:66:12: ( 'V' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:66:14: 'V'
             {
             match('V'); 
 
@@ -547,8 +547,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "W"
     public final void mW() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:67:12: ( 'W' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:67:14: 'W'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:67:12: ( 'W' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:67:14: 'W'
             {
             match('W'); 
 
@@ -565,8 +565,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "X"
     public final void mX() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:68:12: ( 'X' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:68:14: 'X'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:68:12: ( 'X' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:68:14: 'X'
             {
             match('X'); 
 
@@ -583,8 +583,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "Y"
     public final void mY() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:69:12: ( 'Y' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:69:14: 'Y'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:69:12: ( 'Y' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:69:14: 'Y'
             {
             match('Y'); 
 
@@ -601,8 +601,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR start "Z"
     public final void mZ() throws RecognitionException {
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:70:12: ( 'Z' )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:70:14: 'Z'
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:70:12: ( 'Z' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:70:14: 'Z'
             {
             match('Z'); 
 
@@ -621,8 +621,8 @@ public class AST_SymbolRaetselLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:72:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:72:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:72:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:72:9: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -648,7 +648,7 @@ public class AST_SymbolRaetselLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:1:8: ( BUCHSTABEN | EQ | PLUS | MINUS | WS )
+        // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:1:8: ( BUCHSTABEN | EQ | PLUS | MINUS | WS )
         int alt1=5;
         switch ( input.LA(1) ) {
         case 'A':
@@ -714,7 +714,7 @@ public class AST_SymbolRaetselLexer extends Lexer {
 
         switch (alt1) {
             case 1 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:1:10: BUCHSTABEN
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:1:10: BUCHSTABEN
                 {
                 mBUCHSTABEN(); 
 
@@ -722,7 +722,7 @@ public class AST_SymbolRaetselLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:1:21: EQ
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:1:21: EQ
                 {
                 mEQ(); 
 
@@ -730,7 +730,7 @@ public class AST_SymbolRaetselLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:1:24: PLUS
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:1:24: PLUS
                 {
                 mPLUS(); 
 
@@ -738,7 +738,7 @@ public class AST_SymbolRaetselLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:1:29: MINUS
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:1:29: MINUS
                 {
                 mMINUS(); 
 
@@ -746,7 +746,7 @@ public class AST_SymbolRaetselLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel.g:1:35: WS
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_Symbolraetsel.g:1:35: WS
                 {
                 mWS(); 
 

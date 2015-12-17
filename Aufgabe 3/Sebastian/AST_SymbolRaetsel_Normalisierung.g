@@ -2,7 +2,7 @@ tree grammar AST_SymbolRaetsel_Normalisierung;
 
 options{
 	output=AST;
-	tokenVocab=AST_SymbolRaetsel;
+	tokenVocab=AST_Symbolraetsel;
 	ASTLabelType=CommonTree;
 }
 

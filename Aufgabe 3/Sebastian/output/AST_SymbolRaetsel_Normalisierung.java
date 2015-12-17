@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g 2015-12-16 16:01:54
+// $ANTLR 3.4 Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g 2015-12-17 14:11:08
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
@@ -6,11 +6,9 @@ import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-import org.antlr.runtime.debug.*;
-import java.io.IOException;
 
 @SuppressWarnings({"all", "warnings", "unchecked"})
-public class AST_SymbolRaetsel_Normalisierung extends DebugTreeParser {
+public class AST_SymbolRaetsel_Normalisierung extends TreeParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "A", "B", "BUCHSTABEN", "C", "D", "E", "EQ", "F", "G", "H", "I", "J", "K", "L", "M", "MINUS", "N", "O", "P", "PLUS", "Q", "R", "S", "T", "U", "V", "W", "WORD", "WS", "X", "Y", "Z"
     };
@@ -57,66 +55,23 @@ public class AST_SymbolRaetsel_Normalisierung extends DebugTreeParser {
     // delegators
 
 
-public static final String[] ruleNames = new String[] {
-    "invalidRule", "prog", "z1", "z2", "z3", "lineMinus", "linePlus", "line"
-};
-
-public static final boolean[] decisionCanBacktrack = new boolean[] {
-    false, // invalid decision
-    false, false, false, false
-};
-
- 
-    public int ruleLevel = 0;
-    public int getRuleLevel() { return ruleLevel; }
-    public void incRuleLevel() { ruleLevel++; }
-    public void decRuleLevel() { ruleLevel--; }
     public AST_SymbolRaetsel_Normalisierung(TreeNodeStream input) {
-        this(input, DebugEventSocketProxy.DEFAULT_DEBUGGER_PORT, new RecognizerSharedState());
+        this(input, new RecognizerSharedState());
     }
-    public AST_SymbolRaetsel_Normalisierung(TreeNodeStream input, int port, RecognizerSharedState state) {
+    public AST_SymbolRaetsel_Normalisierung(TreeNodeStream input, RecognizerSharedState state) {
         super(input, state);
-        DebugEventSocketProxy proxy =
-            new DebugEventSocketProxy(this,port,input.getTreeAdaptor());
-        setDebugListener(proxy);
-        setTreeNodeStream(new DebugTreeNodeStream(input,proxy));
-        try {
-            proxy.handshake();
-        }
-        catch (IOException ioe) {
-            reportError(ioe);
-        }
-        TreeAdaptor adap = new CommonTreeAdaptor();
-        setTreeAdaptor(adap);
-        proxy.setTreeAdaptor(adap);
     }
 
-public AST_SymbolRaetsel_Normalisierung(TreeNodeStream input, DebugEventListener dbg) {
-    super(input, dbg);
-     
-    TreeAdaptor adap = new CommonTreeAdaptor();
-    setTreeAdaptor(adap);
+protected TreeAdaptor adaptor = new CommonTreeAdaptor();
 
-
-}
-
-protected boolean evalPredicate(boolean result, String predicate) {
-    dbg.semanticPredicate(result, predicate);
-    return result;
-}
-
-protected DebugTreeAdaptor adaptor;
 public void setTreeAdaptor(TreeAdaptor adaptor) {
-    this.adaptor = new DebugTreeAdaptor(dbg,adaptor);
-
-
+    this.adaptor = adaptor;
 }
 public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
-
     public String[] getTokenNames() { return AST_SymbolRaetsel_Normalisierung.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g"; }
+    public String getGrammarFileName() { return "Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g"; }
 
 
     public static class prog_return extends TreeRuleReturnScope {
@@ -126,7 +81,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "prog"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:9:1: prog : line line line line line line ;
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:9:1: prog : line line line line line line ;
     public final AST_SymbolRaetsel_Normalisierung.prog_return prog() throws RecognitionException {
         AST_SymbolRaetsel_Normalisierung.prog_return retval = new AST_SymbolRaetsel_Normalisierung.prog_return();
         retval.start = input.LT(1);
@@ -151,21 +106,13 @@ public TreeAdaptor getTreeAdaptor() {
 
 
 
-        try { dbg.enterRule(getGrammarFileName(), "prog");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(9, 0);
-
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:9:7: ( line line line line line line )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:9:9: line line line line line line
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:9:7: ( line line line line line line )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:9:9: line line line line line line
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            dbg.location(9,9);
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_line_in_prog36);
             line1=line();
@@ -174,7 +121,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, line1.getTree());
 
-            dbg.location(9,14);
+
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_line_in_prog38);
             line2=line();
@@ -183,7 +130,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, line2.getTree());
 
-            dbg.location(9,19);
+
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_line_in_prog40);
             line3=line();
@@ -192,7 +139,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, line3.getTree());
 
-            dbg.location(9,24);
+
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_line_in_prog42);
             line4=line();
@@ -201,7 +148,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, line4.getTree());
 
-            dbg.location(9,29);
+
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_line_in_prog44);
             line5=line();
@@ -210,7 +157,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, line5.getTree());
 
-            dbg.location(9,34);
+
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_line_in_prog46);
             line6=line();
@@ -233,15 +180,6 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(9, 37);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "prog");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return retval;
     }
     // $ANTLR end "prog"
@@ -254,7 +192,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "line"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:11:1: line : ( linePlus | lineMinus );
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:11:1: line : ( linePlus | lineMinus );
     public final AST_SymbolRaetsel_Normalisierung.line_return line() throws RecognitionException {
         AST_SymbolRaetsel_Normalisierung.line_return retval = new AST_SymbolRaetsel_Normalisierung.line_return();
         retval.start = input.LT(1);
@@ -271,16 +209,9 @@ public TreeAdaptor getTreeAdaptor() {
 
 
 
-        try { dbg.enterRule(getGrammarFileName(), "line");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(11, 0);
-
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:11:6: ( linePlus | lineMinus )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:11:6: ( linePlus | lineMinus )
             int alt1=2;
-            try { dbg.enterDecision(1, decisionCanBacktrack[1]);
-
             int LA1_0 = input.LA(1);
 
             if ( (LA1_0==EQ) ) {
@@ -299,7 +230,6 @@ public TreeAdaptor getTreeAdaptor() {
                         NoViableAltException nvae =
                             new NoViableAltException("", 1, 2, input);
 
-                        dbg.recognitionException(nvae);
                         throw nvae;
 
                     }
@@ -308,7 +238,6 @@ public TreeAdaptor getTreeAdaptor() {
                     NoViableAltException nvae =
                         new NoViableAltException("", 1, 1, input);
 
-                    dbg.recognitionException(nvae);
                     throw nvae;
 
                 }
@@ -317,22 +246,16 @@ public TreeAdaptor getTreeAdaptor() {
                 NoViableAltException nvae =
                     new NoViableAltException("", 1, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
 
             }
-            } finally {dbg.exitDecision(1);}
-
             switch (alt1) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:11:9: linePlus
+                    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:11:9: linePlus
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    dbg.location(11,9);
                     _last = (CommonTree)input.LT(1);
                     pushFollow(FOLLOW_linePlus_in_line55);
                     linePlus7=linePlus();
@@ -345,14 +268,11 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:12:4: lineMinus
+                    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:12:4: lineMinus
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    dbg.location(12,4);
                     _last = (CommonTree)input.LT(1);
                     pushFollow(FOLLOW_lineMinus_in_line60);
                     lineMinus8=lineMinus();
@@ -377,15 +297,6 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(12, 12);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "line");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return retval;
     }
     // $ANTLR end "line"
@@ -398,7 +309,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "linePlus"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:15:1: linePlus : ^( EQ ^( PLUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) ) ;
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:15:1: linePlus : ^( EQ ^( PLUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) ) ;
     public final AST_SymbolRaetsel_Normalisierung.linePlus_return linePlus() throws RecognitionException {
         AST_SymbolRaetsel_Normalisierung.linePlus_return retval = new AST_SymbolRaetsel_Normalisierung.linePlus_return();
         retval.start = input.LT(1);
@@ -427,27 +338,18 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree WORD13_tree=null;
         CommonTree WORD15_tree=null;
 
-        try { dbg.enterRule(getGrammarFileName(), "linePlus");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(15, 0);
-
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:15:9: ( ^( EQ ^( PLUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) ) )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:15:11: ^( EQ ^( PLUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:15:9: ( ^( EQ ^( PLUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) ) )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:15:11: ^( EQ ^( PLUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) )
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            dbg.location(15,11);
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_1 = _last;
             CommonTree _first_1 = null;
             CommonTree root_1 = (CommonTree)adaptor.nil();
-            dbg.location(15,13);
             _last = (CommonTree)input.LT(1);
             EQ9=(CommonTree)match(input,EQ,FOLLOW_EQ_in_linePlus70); 
             EQ9_tree = (CommonTree)adaptor.dupNode(EQ9);
@@ -457,13 +359,11 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(15,16);
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_2 = _last;
             CommonTree _first_2 = null;
             CommonTree root_2 = (CommonTree)adaptor.nil();
-            dbg.location(15,18);
             _last = (CommonTree)input.LT(1);
             PLUS10=(CommonTree)match(input,PLUS,FOLLOW_PLUS_in_linePlus73); 
             PLUS10_tree = (CommonTree)adaptor.dupNode(PLUS10);
@@ -473,13 +373,11 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(15,23);
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_3 = _last;
             CommonTree _first_3 = null;
             CommonTree root_3 = (CommonTree)adaptor.nil();
-            dbg.location(15,25);
             _last = (CommonTree)input.LT(1);
             WORD11=(CommonTree)match(input,WORD,FOLLOW_WORD_in_linePlus76); 
             WORD11_tree = (CommonTree)adaptor.dupNode(WORD11);
@@ -489,7 +387,6 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(15,30);
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_z1_in_linePlus78);
             z112=z1();
@@ -504,13 +401,12 @@ public TreeAdaptor getTreeAdaptor() {
             _last = _save_last_3;
             }
 
-            dbg.location(15,34);
+
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_3 = _last;
             CommonTree _first_3 = null;
             CommonTree root_3 = (CommonTree)adaptor.nil();
-            dbg.location(15,36);
             _last = (CommonTree)input.LT(1);
             WORD13=(CommonTree)match(input,WORD,FOLLOW_WORD_in_linePlus82); 
             WORD13_tree = (CommonTree)adaptor.dupNode(WORD13);
@@ -520,7 +416,6 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(15,41);
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_z2_in_linePlus84);
             z214=z2();
@@ -541,13 +436,12 @@ public TreeAdaptor getTreeAdaptor() {
             _last = _save_last_2;
             }
 
-            dbg.location(15,46);
+
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_2 = _last;
             CommonTree _first_2 = null;
             CommonTree root_2 = (CommonTree)adaptor.nil();
-            dbg.location(15,48);
             _last = (CommonTree)input.LT(1);
             WORD15=(CommonTree)match(input,WORD,FOLLOW_WORD_in_linePlus89); 
             WORD15_tree = (CommonTree)adaptor.dupNode(WORD15);
@@ -557,7 +451,6 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(15,53);
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_z3_in_linePlus91);
             z316=z3();
@@ -592,15 +485,6 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(15, 56);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "linePlus");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return retval;
     }
     // $ANTLR end "linePlus"
@@ -613,7 +497,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "lineMinus"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:18:1: lineMinus : ^( EQ ^( MINUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) ) -> ^( EQ ^( MINUS[\"+\"] ^( WORD z3 ) ^( WORD z2 ) ) ^( WORD z1 ) ) ;
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:18:1: lineMinus : ^( EQ ^( MINUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) ) -> ^( EQ ^( MINUS[\"+\"] ^( WORD z3 ) ^( WORD z2 ) ) ^( WORD z1 ) ) ;
     public final AST_SymbolRaetsel_Normalisierung.lineMinus_return lineMinus() throws RecognitionException {
         AST_SymbolRaetsel_Normalisierung.lineMinus_return retval = new AST_SymbolRaetsel_Normalisierung.lineMinus_return();
         retval.start = input.LT(1);
@@ -647,57 +531,43 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_z1=new RewriteRuleSubtreeStream(adaptor,"rule z1");
         RewriteRuleSubtreeStream stream_z2=new RewriteRuleSubtreeStream(adaptor,"rule z2");
         RewriteRuleSubtreeStream stream_z3=new RewriteRuleSubtreeStream(adaptor,"rule z3");
-        try { dbg.enterRule(getGrammarFileName(), "lineMinus");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(18, 0);
-
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:18:10: ( ^( EQ ^( MINUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) ) -> ^( EQ ^( MINUS[\"+\"] ^( WORD z3 ) ^( WORD z2 ) ) ^( WORD z1 ) ) )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:18:12: ^( EQ ^( MINUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:18:10: ( ^( EQ ^( MINUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) ) -> ^( EQ ^( MINUS[\"+\"] ^( WORD z3 ) ^( WORD z2 ) ) ^( WORD z1 ) ) )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:18:12: ^( EQ ^( MINUS ^( WORD z1 ) ^( WORD z2 ) ) ^( WORD z3 ) )
             {
-            dbg.location(18,12);
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_1 = _last;
             CommonTree _first_1 = null;
             CommonTree root_1 = (CommonTree)adaptor.nil();
-            dbg.location(18,14);
             _last = (CommonTree)input.LT(1);
             EQ17=(CommonTree)match(input,EQ,FOLLOW_EQ_in_lineMinus102);  
             stream_EQ.add(EQ17);
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(18,17);
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_2 = _last;
             CommonTree _first_2 = null;
             CommonTree root_2 = (CommonTree)adaptor.nil();
-            dbg.location(18,19);
             _last = (CommonTree)input.LT(1);
             MINUS18=(CommonTree)match(input,MINUS,FOLLOW_MINUS_in_lineMinus105);  
             stream_MINUS.add(MINUS18);
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(18,25);
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_3 = _last;
             CommonTree _first_3 = null;
             CommonTree root_3 = (CommonTree)adaptor.nil();
-            dbg.location(18,27);
             _last = (CommonTree)input.LT(1);
             WORD19=(CommonTree)match(input,WORD,FOLLOW_WORD_in_lineMinus108);  
             stream_WORD.add(WORD19);
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(18,32);
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_z1_in_lineMinus110);
             z120=z1();
@@ -711,20 +581,18 @@ public TreeAdaptor getTreeAdaptor() {
             _last = _save_last_3;
             }
 
-            dbg.location(18,36);
+
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_3 = _last;
             CommonTree _first_3 = null;
             CommonTree root_3 = (CommonTree)adaptor.nil();
-            dbg.location(18,38);
             _last = (CommonTree)input.LT(1);
             WORD21=(CommonTree)match(input,WORD,FOLLOW_WORD_in_lineMinus114);  
             stream_WORD.add(WORD21);
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(18,43);
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_z2_in_lineMinus116);
             z222=z2();
@@ -744,20 +612,18 @@ public TreeAdaptor getTreeAdaptor() {
             _last = _save_last_2;
             }
 
-            dbg.location(18,48);
+
             _last = (CommonTree)input.LT(1);
             {
             CommonTree _save_last_2 = _last;
             CommonTree _first_2 = null;
             CommonTree root_2 = (CommonTree)adaptor.nil();
-            dbg.location(18,50);
             _last = (CommonTree)input.LT(1);
             WORD23=(CommonTree)match(input,WORD,FOLLOW_WORD_in_lineMinus121);  
             stream_WORD.add(WORD23);
 
 
             match(input, Token.DOWN, null); 
-            dbg.location(18,55);
             _last = (CommonTree)input.LT(1);
             pushFollow(FOLLOW_z3_in_lineMinus123);
             z324=z3();
@@ -779,7 +645,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: MINUS, WORD, z1, z2, EQ, WORD, WORD, z3
+            // elements: WORD, WORD, WORD, EQ, MINUS, z1, z3, z2
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -791,48 +657,39 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (CommonTree)adaptor.nil();
             // 19:2: -> ^( EQ ^( MINUS[\"+\"] ^( WORD z3 ) ^( WORD z2 ) ) ^( WORD z1 ) )
             {
-                dbg.location(19,5);
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:19:5: ^( EQ ^( MINUS[\"+\"] ^( WORD z3 ) ^( WORD z2 ) ) ^( WORD z1 ) )
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:19:5: ^( EQ ^( MINUS[\"+\"] ^( WORD z3 ) ^( WORD z2 ) ) ^( WORD z1 ) )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
-                dbg.location(19,7);
                 root_1 = (CommonTree)adaptor.becomeRoot(
                 stream_EQ.nextNode()
                 , root_1);
 
-                dbg.location(19,10);
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:19:10: ^( MINUS[\"+\"] ^( WORD z3 ) ^( WORD z2 ) )
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:19:10: ^( MINUS[\"+\"] ^( WORD z3 ) ^( WORD z2 ) )
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
-                dbg.location(19,12);
                 root_2 = (CommonTree)adaptor.becomeRoot(
                 (CommonTree)adaptor.create(MINUS, "+")
                 , root_2);
 
-                dbg.location(19,23);
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:19:23: ^( WORD z3 )
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:19:23: ^( WORD z3 )
                 {
                 CommonTree root_3 = (CommonTree)adaptor.nil();
-                dbg.location(19,25);
                 root_3 = (CommonTree)adaptor.becomeRoot(
                 stream_WORD.nextNode()
                 , root_3);
 
-                dbg.location(19,30);
                 adaptor.addChild(root_3, stream_z3.nextTree());
 
                 adaptor.addChild(root_2, root_3);
                 }
-                dbg.location(19,34);
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:19:34: ^( WORD z2 )
+
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:19:34: ^( WORD z2 )
                 {
                 CommonTree root_3 = (CommonTree)adaptor.nil();
-                dbg.location(19,36);
                 root_3 = (CommonTree)adaptor.becomeRoot(
                 stream_WORD.nextNode()
                 , root_3);
 
-                dbg.location(19,41);
                 adaptor.addChild(root_3, stream_z2.nextTree());
 
                 adaptor.addChild(root_2, root_3);
@@ -840,16 +697,14 @@ public TreeAdaptor getTreeAdaptor() {
 
                 adaptor.addChild(root_1, root_2);
                 }
-                dbg.location(19,46);
-                // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:19:46: ^( WORD z1 )
+
+                // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:19:46: ^( WORD z1 )
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
-                dbg.location(19,48);
                 root_2 = (CommonTree)adaptor.becomeRoot(
                 stream_WORD.nextNode()
                 , root_2);
 
-                dbg.location(19,53);
                 adaptor.addChild(root_2, stream_z1.nextTree());
 
                 adaptor.addChild(root_1, root_2);
@@ -876,15 +731,6 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(19, 56);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "lineMinus");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return retval;
     }
     // $ANTLR end "lineMinus"
@@ -897,7 +743,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "z1"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:22:1: z1 : ( BUCHSTABEN )+ ;
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:22:1: z1 : ( BUCHSTABEN )+ ;
     public final AST_SymbolRaetsel_Normalisierung.z1_return z1() throws RecognitionException {
         AST_SymbolRaetsel_Normalisierung.z1_return retval = new AST_SymbolRaetsel_Normalisierung.z1_return();
         retval.start = input.LT(1);
@@ -912,30 +758,18 @@ public TreeAdaptor getTreeAdaptor() {
 
         CommonTree BUCHSTABEN25_tree=null;
 
-        try { dbg.enterRule(getGrammarFileName(), "z1");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(22, 0);
-
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:22:5: ( ( BUCHSTABEN )+ )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:22:7: ( BUCHSTABEN )+
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:22:5: ( ( BUCHSTABEN )+ )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:22:7: ( BUCHSTABEN )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            dbg.location(22,7);
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:22:7: ( BUCHSTABEN )+
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:22:7: ( BUCHSTABEN )+
             int cnt2=0;
-            try { dbg.enterSubRule(2);
-
             loop2:
             do {
                 int alt2=2;
-                try { dbg.enterDecision(2, decisionCanBacktrack[2]);
-
                 int LA2_0 = input.LA(1);
 
                 if ( (LA2_0==BUCHSTABEN) ) {
@@ -943,15 +777,10 @@ public TreeAdaptor getTreeAdaptor() {
                 }
 
 
-                } finally {dbg.exitDecision(2);}
-
                 switch (alt2) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:22:7: BUCHSTABEN
+            	    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:22:7: BUCHSTABEN
             	    {
-            	    dbg.location(22,7);
             	    _last = (CommonTree)input.LT(1);
             	    BUCHSTABEN25=(CommonTree)match(input,BUCHSTABEN,FOLLOW_BUCHSTABEN_in_z1167); 
             	    BUCHSTABEN25_tree = (CommonTree)adaptor.dupNode(BUCHSTABEN25);
@@ -967,13 +796,10 @@ public TreeAdaptor getTreeAdaptor() {
             	    if ( cnt2 >= 1 ) break loop2;
                         EarlyExitException eee =
                             new EarlyExitException(2, input);
-                        dbg.recognitionException(eee);
-
                         throw eee;
                 }
                 cnt2++;
             } while (true);
-            } finally {dbg.exitSubRule(2);}
 
 
             }
@@ -989,15 +815,6 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(22, 17);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "z1");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return retval;
     }
     // $ANTLR end "z1"
@@ -1010,7 +827,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "z2"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:23:1: z2 : ( BUCHSTABEN )+ ;
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:23:1: z2 : ( BUCHSTABEN )+ ;
     public final AST_SymbolRaetsel_Normalisierung.z2_return z2() throws RecognitionException {
         AST_SymbolRaetsel_Normalisierung.z2_return retval = new AST_SymbolRaetsel_Normalisierung.z2_return();
         retval.start = input.LT(1);
@@ -1025,30 +842,18 @@ public TreeAdaptor getTreeAdaptor() {
 
         CommonTree BUCHSTABEN26_tree=null;
 
-        try { dbg.enterRule(getGrammarFileName(), "z2");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(23, 0);
-
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:23:5: ( ( BUCHSTABEN )+ )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:23:7: ( BUCHSTABEN )+
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:23:5: ( ( BUCHSTABEN )+ )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:23:7: ( BUCHSTABEN )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            dbg.location(23,7);
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:23:7: ( BUCHSTABEN )+
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:23:7: ( BUCHSTABEN )+
             int cnt3=0;
-            try { dbg.enterSubRule(3);
-
             loop3:
             do {
                 int alt3=2;
-                try { dbg.enterDecision(3, decisionCanBacktrack[3]);
-
                 int LA3_0 = input.LA(1);
 
                 if ( (LA3_0==BUCHSTABEN) ) {
@@ -1056,15 +861,10 @@ public TreeAdaptor getTreeAdaptor() {
                 }
 
 
-                } finally {dbg.exitDecision(3);}
-
                 switch (alt3) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:23:7: BUCHSTABEN
+            	    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:23:7: BUCHSTABEN
             	    {
-            	    dbg.location(23,7);
             	    _last = (CommonTree)input.LT(1);
             	    BUCHSTABEN26=(CommonTree)match(input,BUCHSTABEN,FOLLOW_BUCHSTABEN_in_z2176); 
             	    BUCHSTABEN26_tree = (CommonTree)adaptor.dupNode(BUCHSTABEN26);
@@ -1080,13 +880,10 @@ public TreeAdaptor getTreeAdaptor() {
             	    if ( cnt3 >= 1 ) break loop3;
                         EarlyExitException eee =
                             new EarlyExitException(3, input);
-                        dbg.recognitionException(eee);
-
                         throw eee;
                 }
                 cnt3++;
             } while (true);
-            } finally {dbg.exitSubRule(3);}
 
 
             }
@@ -1102,15 +899,6 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(23, 17);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "z2");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return retval;
     }
     // $ANTLR end "z2"
@@ -1123,7 +911,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "z3"
-    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:24:1: z3 : ( BUCHSTABEN )+ ;
+    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:24:1: z3 : ( BUCHSTABEN )+ ;
     public final AST_SymbolRaetsel_Normalisierung.z3_return z3() throws RecognitionException {
         AST_SymbolRaetsel_Normalisierung.z3_return retval = new AST_SymbolRaetsel_Normalisierung.z3_return();
         retval.start = input.LT(1);
@@ -1138,30 +926,18 @@ public TreeAdaptor getTreeAdaptor() {
 
         CommonTree BUCHSTABEN27_tree=null;
 
-        try { dbg.enterRule(getGrammarFileName(), "z3");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(24, 0);
-
         try {
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:24:5: ( ( BUCHSTABEN )+ )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:24:8: ( BUCHSTABEN )+
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:24:5: ( ( BUCHSTABEN )+ )
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:24:8: ( BUCHSTABEN )+
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            dbg.location(24,8);
-            // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:24:8: ( BUCHSTABEN )+
+            // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:24:8: ( BUCHSTABEN )+
             int cnt4=0;
-            try { dbg.enterSubRule(4);
-
             loop4:
             do {
                 int alt4=2;
-                try { dbg.enterDecision(4, decisionCanBacktrack[4]);
-
                 int LA4_0 = input.LA(1);
 
                 if ( (LA4_0==BUCHSTABEN) ) {
@@ -1169,15 +945,10 @@ public TreeAdaptor getTreeAdaptor() {
                 }
 
 
-                } finally {dbg.exitDecision(4);}
-
                 switch (alt4) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\VAIO PRO\\Documents\\HAW\\4_Sem\\CI_Neitzke\\CI-Aufgaben\\Aufgabe 3\\AST_SymbolRaetsel_Normalisierung.g:24:8: BUCHSTABEN
+            	    // Z:\\Compiler\\CIP\\Aufgabe 3\\Sebastian\\AST_SymbolRaetsel_Normalisierung.g:24:8: BUCHSTABEN
             	    {
-            	    dbg.location(24,8);
             	    _last = (CommonTree)input.LT(1);
             	    BUCHSTABEN27=(CommonTree)match(input,BUCHSTABEN,FOLLOW_BUCHSTABEN_in_z3186); 
             	    BUCHSTABEN27_tree = (CommonTree)adaptor.dupNode(BUCHSTABEN27);
@@ -1193,13 +964,10 @@ public TreeAdaptor getTreeAdaptor() {
             	    if ( cnt4 >= 1 ) break loop4;
                         EarlyExitException eee =
                             new EarlyExitException(4, input);
-                        dbg.recognitionException(eee);
-
                         throw eee;
                 }
                 cnt4++;
             } while (true);
-            } finally {dbg.exitSubRule(4);}
 
 
             }
@@ -1215,15 +983,6 @@ public TreeAdaptor getTreeAdaptor() {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(24, 18);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "z3");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return retval;
     }
     // $ANTLR end "z3"

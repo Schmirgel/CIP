@@ -1,4 +1,4 @@
-grammar AST_SymbolRaetsel;
+grammar AST_Symbolraetsel;
 
 //AST-Ereugen
 options{
